@@ -6,18 +6,28 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "babel": "./node_modules/.bin/babel",
+    "parse": "babel-node scripts/parse.js"
   },
   "dependencies": {
     "element-ui": "^2.15.9",
     "pinia": "^2.0.14",
-    "vue": "^2.7.0",
+    "vue": "^2.7.10",
     "vue-router": "^3.5.4"
   },
+  "type": "module",
   "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
     "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-vue2": "^1.1.2",
+    "@vuedoc/md": "^4.0.0-beta5",
+    "@vuedoc/parser": "^4.0.0-beta9",
     "autoprefixer": "^10.4.7",
+    "babel-node": "^0.0.1-security",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
