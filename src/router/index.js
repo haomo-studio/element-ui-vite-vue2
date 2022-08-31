@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import testRoutes from './test'
 
 // 解决ncaught (in promise) NavigationDuplicated 问题
 const originalPush = VueRouter.prototype.push
@@ -19,32 +20,11 @@ VueRouter.prototype.replace = function replace(location, onResolve, onReject) {
 
 Vue.use(VueRouter)
 
-export const constantRoutes = [
-  {
-    path: '/',
-    redirect: '/mainPage',
-  },
-  {
-    path: '/mainPage',
-    name: 'MainPage',
-    hidden: true,
-    meta: {
-      name: '页面一',
-    },
-    component: () =>
-      import(/* webpackChunkName: "MainPage" */ '/@/views/MainPage.vue'),
-  },
-  {
-    path: '/contentPage',
-    name: 'ContentPage',
-    hidden: true,
-    meta: {
-      name: '页面二',
-    },
-    component: () =>
-      import(/* webpackChunkName: "ContentPage" */ '/@/views/ContentPage.vue'),
-  },
-]
+const routes = [
+    
+].concat(testRoutes);
+
+export const constantRoutes = routes
 
 const createRouter = () =>
   new VueRouter({

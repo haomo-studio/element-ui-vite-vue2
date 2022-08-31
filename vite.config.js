@@ -4,6 +4,8 @@ import legacy from '@vitejs/plugin-legacy'
 import Components from 'unplugin-vue-components/vite'
 import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
 import path from 'path'
+import { resolve } from "path"
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -38,6 +40,14 @@ export default defineConfig({
         find: /\/@\//,
         replacement: path.resolve('src') + '/',
       },
+      {
+        find: "@",
+        replacement: resolve(__dirname, "src"),
+      },
+      {
+        find: "/@/pages",
+        replacement: resolve(__dirname, "src/pages"),
+      }
     ],
   },
 })

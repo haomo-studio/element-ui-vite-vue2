@@ -6,15 +6,15 @@
       {
         "name": "HmGrid",
         "title": "多列布局",
-        "importPath": "built-in/element-plus/layout/HmGrid",
-        "imgUrl": "built-in/element-plus/layout/img/HmGrid.png",
+        "importPath": "built-in/element-vue2/layout/HmGrid",
+        "imgUrl": "built-in/element-vue2/layout/img/HmGrid.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmMultiGrid",
         "title": "Grid布局",
-        "importPath": "built-in/element-plus/layout/HmMultiGrid",
+        "importPath": "built-in/element-vue2/layout/HmMultiGrid",
         "imgUrl": "",
         "type": 0,
         "isBuiltIn": true
@@ -28,40 +28,40 @@
       {
         "name": "HmBgCard",
         "title": "背景框",
-        "importPath": "built-in/element-plus/layout/HmBgCard",
-        "imgUrl": "built-in/element-plus/layout/img/HmBgCard.png",
+        "importPath": "built-in/element-vue2/layout/HmBgCard",
+        "imgUrl": "built-in/element-vue2/layout/img/HmBgCard.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmTabs",
         "title": "标签页",
-        "importPath": "built-in/element-plus/layout/HmTabs",
-        "imgUrl": "built-in/element-plus/layout/img/HmTabs.png",
+        "importPath": "built-in/element-vue2/layout/HmTabs",
+        "imgUrl": "built-in/element-vue2/layout/img/HmTabs.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmPanel",
         "title": "面板",
-        "importPath": "built-in/element-plus/layout/HmPanel",
-        "imgUrl": "built-in/element-plus/layout/img/HmPanel.png",
+        "importPath": "built-in/element-vue2/layout/HmPanel",
+        "imgUrl": "built-in/element-vue2/layout/img/HmPanel.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmModal",
         "title": "对话框",
-        "importPath": "built-in/element-plus/layout/HmModal",
-        "imgUrl": "built-in/element-plus/layout/img/HmModal.png",
+        "importPath": "built-in/element-vue2/layout/HmModal",
+        "imgUrl": "built-in/element-vue2/layout/img/HmModal.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
         "name": "HmElementDrawer",
         "title": "抽屉",
-        "importPath": "built-in/element-plus/HmElementDrawer",
-        "imgUrl": "built-in/element-plus/img/HmElementDrawer.png",
+        "importPath": "built-in/element-vue2/HmElementDrawer",
+        "imgUrl": "built-in/element-vue2/img/HmElementDrawer.png",
         "type": 0,
         "isBuiltIn": true
       }
