@@ -18,14 +18,15 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        tabWidth: 2,
-        singleQuote: true,
-        semi: false,
-        endOfLine: 'auto',
-      },
-    ],
+    'prettier/prettier': 0
+    // 'prettier/prettier': [
+    //   'error',
+    //   {
+    //     tabWidth: 2,
+    //     singleQuote: true,
+    //     semi: false,
+    //     endOfLine: 'auto',
+    //   },
+    // ],
   },
 }
