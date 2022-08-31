@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "lint": "eslint --fix",
     "babel": "./node_modules/.bin/babel",
-    "parse": "babel-node scripts/parse.js"
+    "parse": "babel-node scripts/parse.js",
+    "parse-all": "bash scripts/parse.sh"
   },
   "dependencies": {
     "element-ui": "^2.15.9",
