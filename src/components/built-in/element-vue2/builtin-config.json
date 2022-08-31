@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "name": "布局",
+    "componentList": [
+      {
+        "name": "HmGrid",
+        "title": "多列布局",
+        "importPath": "built-in/element-plus/layout/HmGrid",
+        "imgUrl": "built-in/element-plus/layout/img/HmGrid.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmMultiGrid",
+        "title": "Grid布局",
+        "importPath": "built-in/element-plus/layout/HmMultiGrid",
+        "imgUrl": "",
+        "type": 0,
+        "isBuiltIn": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "容器组件",
+    "componentList": [
+      {
+        "name": "HmBgCard",
+        "title": "背景框",
+        "importPath": "built-in/element-plus/layout/HmBgCard",
+        "imgUrl": "built-in/element-plus/layout/img/HmBgCard.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmTabs",
+        "title": "标签页",
+        "importPath": "built-in/element-plus/layout/HmTabs",
+        "imgUrl": "built-in/element-plus/layout/img/HmTabs.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmPanel",
+        "title": "面板",
+        "importPath": "built-in/element-plus/layout/HmPanel",
+        "imgUrl": "built-in/element-plus/layout/img/HmPanel.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmModal",
+        "title": "对话框",
+        "importPath": "built-in/element-plus/layout/HmModal",
+        "imgUrl": "built-in/element-plus/layout/img/HmModal.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmElementDrawer",
+        "title": "抽屉",
+        "importPath": "built-in/element-plus/HmElementDrawer",
+        "imgUrl": "built-in/element-plus/img/HmElementDrawer.png",
+        "type": 0,
+        "isBuiltIn": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "表单组件",
+    "componentList": []
+  },
+  {
+    "id": 4,
+    "name": "基础组件",
+    "componentList": []
+  },
+  {
+    "id": 5,
+    "name": "数据展示",
+    "componentList": []
+  },
+  {
+    "id": 6,
+    "name": "导航",
+    "componentList": []
+  },
+  {
+    "id": 7,
+    "name": "反馈组件",
+    "componentList": [ ]
+  }
+]
