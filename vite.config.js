@@ -9,7 +9,7 @@ import path from 'path'
 export default defineConfig({
   server: {
     host: true,
-    port: 28847,
+    port: 3000,
   },
   plugins: [
     vue(),
