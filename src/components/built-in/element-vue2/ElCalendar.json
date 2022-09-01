@@ -1,0 +1,272 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "Date",
+        "string",
+        "number"
+      ],
+      "name": "v-model",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "range",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "first-day-of-week",
+      "default": "1",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "selectedDay",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "Date",
+      "name": "now",
+      "initialValue": "new Date()"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "prevMonthDatePrefix",
+      "dependencies": [
+        "date"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "curMonthDatePrefix",
+      "dependencies": [
+        "date"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "nextMonthDatePrefix",
+      "dependencies": [
+        "date"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "formatedDate",
+      "dependencies": [
+        "date"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "i18nDate",
+      "dependencies": [
+        "date",
+        "t"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "formatedToday",
+      "dependencies": [
+        "now"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "realSelectedDay",
+      "dependencies": [
+        "value",
+        "selectedDay",
+        "formatedDate"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "date",
+      "dependencies": [
+        "value",
+        "realSelectedDay",
+        "selectedDay",
+        "validatedRange",
+        "now",
+        "toDate"
+      ]
+    },
+    {
+      "kind": "computed",
+      "description": "if range is valid, we get a two-digit array",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "validatedRange",
+      "dependencies": [
+        "range",
+        "toDate",
+        "rangeValidator",
+        "realFirstDayOfWeek"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "realFirstDayOfWeek",
+      "dependencies": [
+        "firstDayOfWeek"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "date",
+          "type": "Date",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pickDay",
+      "params": [
+        {
+          "name": "day",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "pickDay(day: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectDate",
+      "params": [
+        {
+          "name": "type",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "selectDate(type: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toDate",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "toDate(val: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "rangeValidator",
+      "params": [
+        {
+          "name": "date",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "isStart",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "rangeValidator(date: unknown, isStart: unknown): boolean"
+      ],
+      "returns": {
+        "type": "boolean"
+      }
+    }
+  ],
+  "name": "ElCalendar"
+}

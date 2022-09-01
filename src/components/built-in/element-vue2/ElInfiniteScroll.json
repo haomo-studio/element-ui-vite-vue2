@@ -1,0 +1,13 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "InfiniteScroll"
+}

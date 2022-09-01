@@ -1,0 +1,15 @@
+{
+  "inheritAttrs": true,
+  "errors": [
+    "Unexpected token, expected \",\" (73:10)"
+  ],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [],
+  "data": [],
+  "computed": [],
+  "events": [],
+  "methods": [],
+  "name": "main"
+}
