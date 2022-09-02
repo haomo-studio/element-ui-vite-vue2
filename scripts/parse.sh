@@ -14,7 +14,6 @@ npm run parse ElCollapse collapse/src/collapse.vue
 npm run parse ElColorPicker color-picker/src/main.vue
 npm run parse ElContainer container/src/main.vue
 npm run parse ElDatePicker date-picker/src/picker.vue
-npm run parse ElDescriptions descriptions/src/index.js
 npm run parse ElDialog dialog/src/component.vue
 npm run parse ElDivider divider/src/main.vue
 npm run parse ElDrawer drawer/src/main.vue
@@ -23,7 +22,6 @@ npm run parse ElEmpty empty/src/index.vue
 npm run parse ElForm form/src/form.vue
 npm run parse ElIcon icon/src/icon.vue
 npm run parse ElImage image/src/main.vue
-npm run parse ElInfiniteScroll infinite-scroll/src/main.js
 npm run parse ElInput input/src/input.vue
 npm run parse ElInputNumber input-number/src/input-number.vue
 npm run parse ElLink link/src/main.vue
@@ -43,3 +41,10 @@ npm run parse ElResult result/src/index.vue
 npm run parse ElSelect select/src/select.vue
 npm run parse ElSkeleton skeleton/src/index.vue
 npm run parse ElSlider slider/src/main.vue
+npm run parse ElSteps steps/src/steps.vue
+npm run parse ElSwitch switch/src/component.vue
+npm run parse ElTable table/src/table.vue
+npm run parse ElTabs tabs/src/tabs.vue
+npm run parse ElTag tag/src/tag.vue
+npm run parse ElTransfer transfer/src/main.vue
+npm run parse ElTree tree/src/tree.vue

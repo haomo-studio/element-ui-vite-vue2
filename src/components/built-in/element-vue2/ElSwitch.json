@@ -1,0 +1,287 @@
+{
+  "inheritAttrs": true,
+  "errors": [
+    "tag <input> has no matching end tag."
+  ],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "boolean",
+        "string",
+        "number"
+      ],
+      "name": "v-model",
+      "default": "false",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disabled",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "width",
+      "default": "40",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "active-icon-class",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "inactive-icon-class",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "active-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "inactive-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "active-color",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "inactive-color",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "boolean",
+        "string",
+        "number"
+      ],
+      "name": "active-value",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "boolean",
+        "string",
+        "number"
+      ],
+      "name": "inactive-value",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "name",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "validate-event",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "id",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "coreWidth",
+      "initialValue": "this.width"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "binary",
+      "name": "checked",
+      "dependencies": [
+        "value",
+        "activeValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "switchDisabled",
+      "dependencies": [
+        "disabled",
+        "elForm"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "inactiveValue",
+          "type": [
+            "boolean",
+            "string",
+            "number"
+          ],
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleChange",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleChange(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setBackgroundColor",
+      "params": [],
+      "syntax": [
+        "setBackgroundColor(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "switchValue",
+      "params": [],
+      "syntax": [
+        "switchValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMigratingConfig",
+      "params": [],
+      "syntax": [
+        "getMigratingConfig(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElSwitch"
+}

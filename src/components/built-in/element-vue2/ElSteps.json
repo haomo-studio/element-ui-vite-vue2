@@ -1,0 +1,141 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "number",
+        "string"
+      ],
+      "name": "space",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "active",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "direction",
+      "default": "\"horizontal\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "align-center",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "simple",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "finish-status",
+      "default": "\"finish\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "process-status",
+      "default": "\"process\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "steps",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "stepOffset",
+      "initialValue": "0"
+    }
+  ],
+  "computed": [],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "newVal",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "oldVal",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMigratingConfig",
+      "params": [],
+      "syntax": [
+        "getMigratingConfig(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElSteps"
+}

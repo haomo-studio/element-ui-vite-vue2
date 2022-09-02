@@ -1,0 +1,829 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "data",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "empty-text",
+      "default": "t('el.tree.emptyText')",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "render-after-expand",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "node-key",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "check-strictly",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "default-expand-all",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "expand-on-click-node",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "check-on-click-node",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "check-descendants",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "auto-expand-parent",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "default-checked-keys",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "default-expanded-keys",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "number"
+      ],
+      "name": "current-node-key",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "render-content",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-checkbox",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "draggable",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "allow-drag",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "allow-drop",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "props",
+      "default": "{\"children\":\"children\",\"label\":\"label\",\"disabled\":\"disabled\"}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "lazy",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "highlight-current",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "load",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "filter-node-method",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "accordion",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "indent",
+      "default": "18",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "icon-class",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "store",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "root",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "currentNode",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "treeItems",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "checkboxItems",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "dragState",
+      "initialValue": "{\"showDropIndicator\":false,\"draggingNode\":null,\"dropNode\":null,\"allowDrop\":true}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "children",
+      "dependencies": [
+        "data"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "treeItemArray",
+      "dependencies": [
+        "treeItems"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isEmpty",
+      "dependencies": [
+        "root",
+        "childNodes"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "node-expand",
+      "arguments": [
+        {
+          "name": "nodeData",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "node",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "instance",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "filter",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "filter(value: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getNodeKey",
+      "params": [
+        {
+          "name": "node",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getNodeKey(node: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getNodePath",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getNodePath(data: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCheckedNodes",
+      "params": [
+        {
+          "name": "leafOnly",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "includeHalfChecked",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getCheckedNodes(leafOnly: unknown, includeHalfChecked: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCheckedKeys",
+      "params": [
+        {
+          "name": "leafOnly",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getCheckedKeys(leafOnly: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCurrentNode",
+      "params": [],
+      "syntax": [
+        "getCurrentNode(): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getCurrentKey",
+      "params": [],
+      "syntax": [
+        "getCurrentKey(): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCheckedNodes",
+      "params": [
+        {
+          "name": "nodes",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "leafOnly",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCheckedNodes(nodes: unknown, leafOnly: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCheckedKeys",
+      "params": [
+        {
+          "name": "keys",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "leafOnly",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCheckedKeys(keys: unknown, leafOnly: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setChecked",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "checked",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "deep",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setChecked(data: unknown, checked: unknown, deep: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getHalfCheckedNodes",
+      "params": [],
+      "syntax": [
+        "getHalfCheckedNodes(): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getHalfCheckedKeys",
+      "params": [],
+      "syntax": [
+        "getHalfCheckedKeys(): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCurrentNode",
+      "params": [
+        {
+          "name": "node",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCurrentNode(node: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCurrentKey",
+      "params": [
+        {
+          "name": "key",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCurrentKey(key: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getNode",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getNode(data: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "remove",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "remove(data: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "append",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "parentNode",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "append(data: unknown, parentNode: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "insertBefore",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "refNode",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "insertBefore(data: unknown, refNode: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "insertAfter",
+      "params": [
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "refNode",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "insertAfter(data: unknown, refNode: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleNodeExpand",
+      "params": [
+        {
+          "name": "nodeData",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "node",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "instance",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleNodeExpand(nodeData: unknown, node: unknown, instance: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateKeyChildren",
+      "params": [
+        {
+          "name": "key",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateKeyChildren(key: unknown, data: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initTabIndex",
+      "params": [],
+      "syntax": [
+        "initTabIndex(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleKeydown",
+      "params": [
+        {
+          "name": "ev",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleKeydown(ev: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElTree"
+}
