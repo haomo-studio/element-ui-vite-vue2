@@ -28,6 +28,7 @@ export const constantRoutes = routes
 
 const createRouter = () =>
   new VueRouter({
+    mode: 'history',
     routes: constantRoutes,
   })
 

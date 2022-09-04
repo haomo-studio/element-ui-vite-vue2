@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "element-ui": "^2.15.9",
+    "moment": "^2.29.4",
     "pinia": "^2.0.14",
     "vue": "^2.7.10",
     "vue-router": "^3.5.4"
   },
-  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.18.13",
