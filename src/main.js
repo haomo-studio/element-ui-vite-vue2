@@ -3,6 +3,8 @@ import App from './App.vue'
 import { createPinia, PiniaVuePlugin } from 'pinia'
 import router from './router'
 
+import 'element-ui/lib/theme-chalk/index.css'
+
 Vue.use(PiniaVuePlugin)
 const pinia = createPinia()
 
