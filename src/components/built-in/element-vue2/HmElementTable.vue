@@ -1,38 +1,24 @@
 <template>
   <div class="table-div">
-    <el-table
-      row-key="id"
-      :scroll="scroll"
-      :data="cData"
-      :stripe="stripe"
-      :border="border"
-      :row-class-name="rowClassName.class || function () { return null }"
-      :span-method="spanMethod"
-      :default-expand-all="false"
-      @select="onSelect"
-      @select-all="onSelectAll"
-      @selection-change="onSelectionChange"
-      @row-click="onRowClick"
-      @cell-click="onCellClick"
-      @sort-change="onSortChange"
-      @filter-change="onFilterChange"
-      @expand-change="onExpandChange"
-    >
+    <el-table row-key="id" :scroll="scroll" :data="cData" :stripe="stripe" :border="border"
+      :row-class-name="rowClassName.class || function () { return null }" :span-method="spanMethod"
+      :default-expand-all="false" @select="onSelect" @select-all="onSelectAll" @selection-change="onSelectionChange"
+      @row-click="onRowClick" @cell-click="onCellClick" @sort-change="onSortChange" @filter-change="onFilterChange"
+      @expand-change="onExpandChange">
       <el-table-column v-for="column in columns" v-bind="getColumnProps(column)">
         <template v-if="column.children && column.type != 'action' && column.type != 'selection'" #default="scope">
           <!-- 多级表头（最多支持三级） -->
-          <el-table-column v-if="column.children" v-for="column1 in column.children" 
-            v-bind="getColumnProps(column1)">
+          <el-table-column v-if="column.children" v-for="column1 in column.children" v-bind="getColumnProps(column1)">
 
             <template v-if="column1.children" #default="scope1">
-              <el-table-column v-if="column1.children" v-for="column2 in column1.children" 
+              <el-table-column v-if="column1.children" v-for="column2 in column1.children"
                 v-bind="getColumnProps(column2)">
               </el-table-column>
 
               <span>{{ scope1.row[column1.prop] }}</span>
             </template>
           </el-table-column>
-          
+
           <span>{{ scope.row[column.prop] }}</span>
         </template>
 
@@ -40,15 +26,11 @@
         <template v-if="column.type == 'expand'" #default="scope">
           <slot v-if="column.type == 'expand'" name="embeded"></slot>
         </template>
-        
+
         <!-- 操作按钮 -->
         <template v-if="column.type == 'action'" #default="scope">
-          <el-button
-            v-if="column.type == 'action' && isFlatAction"
-            v-for="action in cActions"
-            v-bind="getActionProps(action)"
-            @click="action.callback"
-          >{{ action.name }}</el-button>
+          <el-button v-if="column.type == 'action' && isFlatAction" v-for="action in cActions"
+            v-bind="getActionProps(action)" @click="action.callback">{{ action.name }}</el-button>
 
           <!-- TODO: 增加下拉选择的多按钮 -->
         </template>
@@ -271,7 +253,7 @@ export default {
      */
     spanMethod: {
       type: Function,
-      default: function (row, column, rowIndex, columnIndex) {}
+      default: function (row, column, rowIndex, columnIndex) { }
     },
     /**
      * 清空过滤排序
@@ -364,6 +346,108 @@ export default {
     this.cActions = this.convertActions(this.actions);
   },
   methods: {
+    getData(url, params) {
+      let self = this;
+      self._getData(url, params);
+    },
+    _getData(url, params) {
+      let self = this;
+      url = url || this.url;
+
+      if (!url) {
+        return;
+      }
+
+      params =
+        params || (this.params ? JSON.parse(JSON.stringify(this.params)) : {});
+
+      // 跟表格自带的翻页过滤排序功能结合
+      // 翻页
+      if (typeof this.cPagination !== "boolean") {
+        params = Object.assign(params, {
+          [this.paginationMap.pageNo]: this.cPagination.current,
+          [this.paginationMap.pageSize]: this.cPagination.pageSize,
+        });
+      }
+
+      // 排序
+      if (this.sorter && this.sorter.field) {
+        params.column = this.sorter.field;
+        params.order = this.sorter.order === "descend" ? "desc" : "asc";
+      }
+
+      // 过滤
+      if (this.filters) {
+        params = Object.assign(params, this.filters);
+        Object.entries(this.filters).forEach(e => {
+          if (typeof e[1] === 'object') {
+            params[e[0]] = e[1].join(",")
+          }
+        })
+      }
+
+      // 加载全部，默认为最多加载100万条
+      if (Number.isNaN(params.pageSize)) {
+        params.pageNo = 1;
+        params.pageSize = 1000000;
+        self.cPagination.current = 1;
+        self.cPagination.pageSize = params.pageSize;
+      }
+
+      if (Number.isNaN(params.pageNo)) {
+        params.pageNo = 1;
+      }
+
+      getAction(url, params).then((resp) => {
+        console.log(`get table data: `, resp);
+        self.cData = [];
+        setTimeout(() => {
+          self.cData = self.getDataList(resp);
+          if (typeof self.cPagination !== "boolean") {
+            self.cPagination.total = self.getDataTotal(resp);
+          }
+          _.each(self.cData, (item, index) => {
+            item.hmNo = index + 1;
+          });
+          self.hmTable.data = self.cData;
+        }, 0);
+      });
+    },
+    /**
+     * 从接口返回结果里取到数组
+     */
+    getDataList(resp) {
+      if (this.getDataMap.list) {
+        let listPath = this.getDataMap.list;
+        listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
+        return jp.query(resp, listPath)[0];
+      }
+
+      if (resp.result) {
+        return resp.result.records || resp.result;
+      }
+
+      if (resp.data) {
+        return resp.data;
+      }
+    },
+    /**
+     *  从接口返回结果里取到总数
+     */
+    getDataTotal(resp) {
+      if (this.getDataMap.total) {
+        let totalPath = this.getDataMap.total;
+        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        return jp.query(resp, totalPath)[0];
+      }
+      if (resp.result) {
+        return resp.result.total || this.cPagination.pageSize;
+      }
+      if (resp.data) {
+        return resp.total || this.cPagination.pageSize;
+      }
+      return this.cPagination.pageSize;
+    },
     onSelect(selection, row) {
       this.$emit("select", selection, row);
     },

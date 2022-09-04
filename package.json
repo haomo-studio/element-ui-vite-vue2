@@ -12,7 +12,9 @@
     "parse-all": "bash scripts/parse.sh"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "element-ui": "^2.15.9",
+    "jsonpath": "^1.1.1",
     "moment": "^2.29.4",
     "pinia": "^2.0.14",
     "vue": "^2.7.10",
