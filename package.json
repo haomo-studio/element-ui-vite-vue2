@@ -13,6 +13,10 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "echarts": "^5.3.3",
+    "echarts-for-vue": "^1.4.1",
+    "echarts-gl": "^2.0.9",
+    "echarts-wordcloud": "^2.0.0",
     "element-ui": "^2.15.9",
     "jsonpath": "^1.1.1",
     "moment": "^2.29.4",
