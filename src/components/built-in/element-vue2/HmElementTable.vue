@@ -41,6 +41,14 @@
 
 <script>
 import _ from 'lodash';
+import jp from "jsonpath";
+import JSONfn from "/@/utils/jsonfn";
+import {
+    getAction,
+    postAction,
+    deleteAction,
+    putAction,
+} from "/@/request/http";
 
 export default {
   name: "HmElementTable",

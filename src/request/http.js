@@ -1,11 +1,12 @@
 import axios from 'axios';
-import { VueCookieNext } from 'vue-cookie-next';
+import VueCookie from 'vue-cookie';
 import {
   TOKEN
 } from "/@/store/mutation-types";
 import {
   ElNotification
 } from 'element-ui'
+import Vue from 'vue';
 // console.log(process.env,'process.env');
 
 //设置baseURL
@@ -31,9 +32,9 @@ function transformAxiosRequest(config) {
   // config.headers['x-api-origin'] = url.origin;
   let schema = url.origin.split(':')[0];
   let port = url.port || (schema === 'http' ? 80 : 443);
-  VueCookieNext.setCookie('x-project-api-schema', schema);
-  VueCookieNext.setCookie('x-project-api-hostname', url.hostname);
-  VueCookieNext.setCookie('x-project-api-port', port);
+  VueCookie.set('x-project-api-schema', schema);
+  VueCookie.set('x-project-api-hostname', url.hostname);
+  VueCookie.set('x-project-api-port', port);
   config.url = `/project-api${url.pathname}`;
   return config;
 }
@@ -51,7 +52,7 @@ function setJeecgAuth(config) {
 }
 
 function setEleAdminAuth(config) {
-  let token = VueCookieNext.getCookie('EL-ADMIN-TOEKN');
+  let token = VueCookie.get('EL-ADMIN-TOEKN');
   if (!token) {
     return;
   }

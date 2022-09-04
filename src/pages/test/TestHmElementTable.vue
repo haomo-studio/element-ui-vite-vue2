@@ -13,6 +13,10 @@
 
     <hm-element-table :columns="columns" :data="dataCombineC1" :combined="['r1c1:r4c1']"></hm-element-table><br/><br/>
 
+    <hm-element-table
+      :columns="sysUserColumns"
+      url="/api/restify/sysUser/list"
+    ></hm-element-table>
     <!-- <hm-element-table :columns="columns" :data="dataCombineR1" :combined="['r1']"></hm-element-table><br/><br/>
  -->
     <!-- <hm-element-table :columns="columns" :data="dataCombineC1C2" :combined="['c1', 'c2']"></hm-element-table><br/><br/>
@@ -76,7 +80,28 @@ export default {
           columnKey: "c4"
         }
       ],
-
+      sysUserColumns: [
+        {
+          label: "username",
+          prop: "username",
+          columnKey: "username",
+        },
+        {
+          label: "realname",
+          prop: "realname",
+          columnKey: "realname",
+        },
+        {
+          label: "phone",
+          prop: "phone",
+          columnKey: "phone"
+        },
+        {
+          label: "email",
+          prop: "email",
+          columnKey: "email"
+        }
+      ],
       columns2: [
         {
           type: "selection"
