@@ -201,6 +201,31 @@ export default {
       type: Object,
     },
     /**
+     * 请求结果映射
+     * @desc list为列表数据路径；total为总数路径。路径采用JSONPath格式（去掉前面的 $.）
+     */
+    getDataMap: {
+        type: Object,
+        default: function () {
+            return {
+                list: '',
+                total: ''
+            }
+        }
+    },
+    /**
+     * 分页参数映射
+     */
+    paginationMap: {
+        type: Object,
+        default: function () {
+            return {
+                pageNo: 'pageNo',
+                pageSize: 'pageSize'
+            }
+        }
+    },
+    /**
      * 可选择行
      */
     rowSelectFlag: {
@@ -352,6 +377,7 @@ export default {
   mounted() {
     this.cData = _.cloneDeep(this.data);
     this.cActions = this.convertActions(this.actions);
+    this.getData();
   },
   methods: {
     getData(url, params) {
@@ -417,7 +443,6 @@ export default {
           _.each(self.cData, (item, index) => {
             item.hmNo = index + 1;
           });
-          self.hmTable.data = self.cData;
         }, 0);
       });
     },
