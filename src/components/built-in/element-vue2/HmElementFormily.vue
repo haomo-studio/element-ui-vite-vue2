@@ -1,31 +1,31 @@
 <template>
-  <FormProvider :form="form" :key="key">
+  <Form 
+    :form="form" :key="key" 
+    :label-col="4"
+    :wrapper-col="14"
+  >
     <SchemaField :schema="schema" />
-  </FormProvider>
+  </Form>
 </template>
-
 <script>
 import { h, defineComponent } from "vue";
 
 import {
+  Button,
+} from 'element-ui'
+
+import {
   Form,
   FormItem,
-  Button,
-  Checkbox,
-  CheckboxGroup as ElCheckboxGroup,
-  DatePicker,
-  Input,
   InputNumber,
-  Radio,
-  RadioGroup as ElRadioGroup,
   Cascader,
-  Select as ElSelect,
-  Option,
-  Slider,
   Switch,
-  TimePicker,
-  Upload,
-} from 'element-ui'
+  Input,
+  Checkbox,
+  Radio,
+  Select,
+  Upload
+} from '@formily/element'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
 import moment from 'moment'
@@ -62,22 +62,6 @@ const Pre = defineComponent({
   },
 })
 
-const Textarea = defineComponent({
-  name: 'Textarea',
-  render() {
-    const props = this.$attrs
-    return h(
-      Input,
-      {
-        attrs: {
-          ...props,
-          type: 'textarea'
-        }
-      },
-    )
-  },
-})
-
 const Img = defineComponent({
   name: 'Img',
   render() {
@@ -94,108 +78,18 @@ const Img = defineComponent({
   },
 })
 
-const CheckboxGroup = defineComponent({
-  name: 'CheckboxGroup',
-  render() {
-    const props = this.$attrs
-    return h(
-      ElCheckboxGroup,
-      {
-        domProps: {
-          value: props.value
-        },
-        attrs: {
-          ...props,
-        }
-      },
-      props.options.map(({label, value}) => {
-        return h(
-          Checkbox,
-          {
-            attrs: {
-              label: value
-            }
-          },
-          label
-        )
-      })
-    )
-  },
-})
-
-const Select = defineComponent({
-  name: 'Select',
-  render() {
-    const props = this.$attrs
-    return h(
-      ElSelect,
-      {
-        attrs: {
-          ...props,
-        }
-      },
-      props.options.map(({label, value}) => {
-        return h(
-          Option,
-          {
-            attrs: {
-              label,
-              value
-            }
-          }
-        )
-      })
-    )
-  },
-})
-
-const RadioGroup = defineComponent({
-  name: 'RadioGroup',
-  render() {
-    const props = this.$attrs
-    return h(
-      ElRadioGroup,
-      {
-        domProps: {
-          value: props.value
-        },
-        attrs: {
-          ...props,
-        }
-      },
-      props.options.map(({label, value}) => {
-        return h(
-          Radio,
-          {
-            attrs: {
-              label: value
-            }
-          },
-          label
-        )
-      })
-    )
-  },
-})
-
 const { SchemaField } = createSchemaField({
   components: {
     Form,
     FormItem,
     Button,
     Checkbox,
-    CheckboxGroup,
-    DatePicker,
     Input,
-    Textarea,
     InputNumber,
     Radio,
-    RadioGroup,
     Cascader,
     Select,
-    Slider,
     Switch,
-    TimePicker,
     Upload,
     Span,
     Pre,
@@ -293,7 +187,7 @@ function isRangeTime(type) {
 }
 
 export default {
-  components: { FormProvider, SchemaField },
+  components: { Form, SchemaField },
   props: {
     /**
       * schema对象
@@ -304,335 +198,262 @@ export default {
         return {
           type: 'object',
           properties: {
-            form: {
-              type: 'void',
-              'x-component': 'Form',
+            span: {
+              'default': 'aaaa',
+              'title': '文字',
+              'required': true,
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '50%',
+                },
+              },
+              'x-component': 'Span',
               'x-component-props': {
                 'style': {
-                  'display': 'flex',
-                  'flexWrap': 'wrap'
+                  'overflowWrap': 'break-word'
                 },
-                'label-width': '10%'
+              },
+            },
+            input: {
+              type: 'string',
+              title: '输入框',
+              required: true,
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '50%',
+                },
+              },
+              'x-component': 'Input',
+              'x-component-props': {
+                '@input': function(e){
+                  console.log('e', e)
+                }
+              },
+            },
+            inputNumber: {
+              type: 'number',
+              maxLength: 1,
+              title: '数字输入框',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '50%',
+                },
+              },
+              'x-component': 'InputNumber',
+              'x-component-props': {
+
+              }
+            },
+            checkbox: {
+              type: 'array',
+              default: ['Apple', 'Pear'],
+              title: '多选框',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '50%',
+                },
+              },
+              'x-component': 'Checkbox.Group',
+              'x-component-props': {
+              },
+              enum: [
+                { label: 'Apple', value: 'Apple' },
+                { label: 'Pear', value: 'Pear' },
+                { label: 'Orange', value: 'Orange' },
+              ]
+            },
+            textarea: {
+              type: 'string',
+              maxLength: 1,
+              default: '文本框',
+              title: '文本框',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Input.TextArea',
+              'x-component-props': {
+                'type': 'text'
+              },
+            },
+            radio: {
+              type: 'string',
+              default: '2',
+              required: true,
+              title: '单选框',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Radio.Group',
+              enum: [
+                { label: 'Apple', value: '1' },
+                { label: 'Pear', value: '2' },
+                { label: 'Orange', value: '3' },
+              ],
+              'x-component-props': {
+                // 'options': [
+                //   { label: 'Apple', value: '1' },
+                //   { label: 'Pear', value: '2' },
+                //   { label: 'Orange', value: '3' },
+                // ]
+              }
+            },
+            cascader: {
+              type: 'array',
+              required: true,
+              title: '级联选择',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Cascader',
+              'x-component-props': {
+              },
+              enum: [
+                {
+                  value: 'zhejiang',
+                  label: 'Zhejiang',
+                  children: [
+                    {
+                      value: 'hangzhou',
+                      label: 'Hangzhou',
+                      children: [
+                        {
+                          value: 'xihu',
+                          label: 'West Lake',
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  value: 'jiangsu',
+                  label: 'Jiangsu',
+                  children: [
+                    {
+                      value: 'nanjing',
+                      label: 'Nanjing',
+                      children: [
+                        {
+                          value: 'zhonghuamen',
+                          label: 'Zhong Hua Men',
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ]
+            },
+            select: {
+              type: 'string',
+              default: '1',
+              required: true,
+              title: '下拉选择',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Select',
+              enum: [
+                { label: 'Apple', value: '1' },
+                { label: 'Pear', value: '2' },
+                { label: 'Orange', value: '3' },
+              ]
+            },
+            switch: {
+              type: 'boolean',
+              title: '开关',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Switch',
+              'x-component-props': {
+
+              }
+            },
+            upload: {
+              type: 'array',
+              title: '上传',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Upload',
+              'x-component-props': {
+                'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
+                'textContent': '上传',
               },
               properties: {
-                span: {
-                  'default': 'aaaa',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '文字',
-                    'name': 'span',
-                    'style': {
-                      width: '50%',
-                    },
-                    'label-width': '20%'
-                  },
-                  'x-component': 'Span',
-                  'x-component-props': {
-                    'style': {
-                      'overflowWrap': 'break-word'
-                    },
-                  },
-                },
-                input: {
-                  type: 'string',
-                  maxLength: 1,
-                  default: '输入框',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '输入框',
-                    'name': 'input',
-                    'style': {
-                      width: '50%',
-                    },
-                    'label-width': '20%',
-                    'class': ['required']
-                  },
-                  'x-component': 'Input',
-                  'x-component-props': {
-                    '@input': function(e){
-                      console.log('e', e)
-                    }
-                  },
-                },
-                inputNumber: {
-                  type: 'number',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '数字输入框',
-                    'name': 'inputNumber',
-                    'style': {
-                      width: '50%',
-                    },
-                    'label-width': '20%'
-                  },
-                  'x-component': 'InputNumber',
-                  'x-component-props': {
-
-                  }
-                },
-                checkbox: {
-                  type: 'array',
-                  default: ['Apple', 'Pear'],
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    label: '多选框',
-                    name: 'checkbox',
-                    'style': {
-                      width: '50%',
-                    },
-                    'label-width': '20%'
-                  },
-                  'x-component': 'CheckboxGroup',
-                  'x-component-props': {
-                    'options': [
-                      { label: 'Apple', value: 'Apple' },
-                      { label: 'Pear', value: 'Pear' },
-                      { label: 'Orange', value: 'Orange' },
-                    ]
-                  }
-                },
-                textarea: {
-                  type: 'string',
-                  maxLength: 1,
-                  default: '文本框',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '文本框',
-                    'name': 'textarea',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'Textarea',
-                  'x-component-props': {
-
-                  },
-                },
-                radio: {
-                  type: 'array',
-                  default: '2',
-                  required: true,
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '单选框',
-                    'name': 'radio',
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'RadioGroup',
-                  'x-component-props': {
-                    'options': [
-                      { label: 'Apple', value: '1' },
-                      { label: 'Pear', value: '2' },
-                      { label: 'Orange', value: '3' },
-                    ]
-                  }
-                },
-                cascader: {
-                  type: 'array',
-                  required: true,
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '级联选择',
-                    'name': 'cascader',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'Cascader',
-                  'x-component-props': {
-                    'options': [
-                      {
-                        value: 'zhejiang',
-                        label: 'Zhejiang',
-                        children: [
-                          {
-                            value: 'hangzhou',
-                            label: 'Hangzhou',
-                            children: [
-                              {
-                                value: 'xihu',
-                                label: 'West Lake',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                      {
-                        value: 'jiangsu',
-                        label: 'Jiangsu',
-                        children: [
-                          {
-                            value: 'nanjing',
-                            label: 'Nanjing',
-                            children: [
-                              {
-                                value: 'zhonghuamen',
-                                label: 'Zhong Hua Men',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ]
-                  }
-                },
-                select: {
-                  type: 'string',
-                  default: '1',
-                  required: true,
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '下拉选择',
-                    'name': 'select',
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'Select',
-                  'x-component-props': {
-                    'allowClear': true,
-                    'options': [
-                      { label: 'Apple', value: '1' },
-                      { label: 'Pear', value: '2' },
-                      { label: 'Orange', value: '3' },
-                    ]
-                  }
-                },
-                slider: {
-                  type: 'number',
-                  required: true,
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '滑动条',
-                    'name': 'slider',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'Slider',
-                  'x-component-props': {
-
-                  }
-                },
-                switch: {
-                  type: 'boolean',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '开关',
-                    'name': 'switch',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'Switch',
-                  'x-component-props': {
-
-                  }
-                },
-                date: {
-                  type: 'date',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '日期选择',
-                    'name': 'date',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'DatePicker',
-                  'x-component-props': {
-
-                  }
-                },
-                rangeDate: {
-                  type: 'array',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '日期范围选择',
-                    'name': 'rangeDate',
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'DatePicker',
-                  'x-component-props': {
-                    'type': 'daterange'
-                  }
-                },
-                time: {
-                  type: 'datetime',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '时间选择',
-                    'name': 'time',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'TimePicker',
-                  'x-component-props': {
-
-                  }
-                },
-                upload: {
-                  type: 'object',
-                  'x-decorator': 'FormItem',
-                  'x-decorator-props': {
-                    'label': '上传',
-                    'name': 'upload',
-                    
-                    'style': {
-                      width: '100%',
-                    }
-                  },
-                  'x-component': 'Upload',
-                  'x-component-props': {
-                    'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
-                    '@change': function(info) {
-                      if (info.file.status !== 'uploading') {
-                        console.log(info.file, info.fileList);
-                      }
-                      if (info.file.status === 'done') {
-                        this.$message.success(`${info.file.name} file uploaded successfully`);
-                      } else if (info.file.status === 'error') {
-                        this.$message.error(`${info.file.name} file upload failed.`);
-                      }
-                    }
-                  },
-                  properties: {
-                    button: {
-                      type: 'void',
-                      'x-component': 'Button',
-                      'x-component-props': {
-                      },
-                      'x-content': "上传文件"
-                    }
-                  }
-                },
                 button: {
-                  "type": 'void',
-                  "x-component": 'Button',
-                  "x-component-props": {
-                    "style": {
-                      width: "50%",
-                    },
-                    "@click": function(e) {
-                      console.log("click", e);
-                    }
+                  type: 'void',
+                  'x-component': 'Button',
+                  'x-component-props': {
                   },
-                  "x-content": "按钮"
+                  'x-content': "上传文件"
                 }
               }
+            },
+            uploadImage: {
+              type: 'array',
+              title: '上传图片',
+              'x-decorator': 'FormItem',
+              'x-decorator-props': {
+                'style': {
+                  width: '100%',
+                },
+                'label-col': 2,
+                'wrapper-col': 14,
+              },
+              'x-component': 'Upload',
+              'x-component-props': {
+                'listType': 'picture-card',
+                'action': 'http://aacsb-stage.bbblackboard.com/api/obe/uploadFile',
+              }
+            },
+            button: {
+              "type": 'void',
+              "x-component": 'Button',
+              "x-component-props": {
+                "style": {
+                  width: "50%",
+                },
+                "@click": function(e) {
+                  console.log("click", e);
+                }
+              },
+              "x-content": "按钮"
             }
-          },
+          }
         }
       }
     },
@@ -733,22 +554,10 @@ export default {
      */
     validate() {
       return new Promise((resolve, reject) => {
-        let fields = this.form.fields
         let values = this.form.values
         this.form.validate().then(() => {
           resolve(values)
         }).catch(e => {
-          // _(e).forEach(item => {
-          //   this.$message.error(h('span',
-          //     { style: { 'whiteSpace': 'pre-wrap' } },
-          //     fields[item.address].decoratorProps.label + "：" + _(item.messages)
-          //   ))
-          //   reject(e)
-          // })
-            this.$message.error(h('span',
-              { style: { 'whiteSpace': 'pre-wrap' } },
-              fields[e[0].address].decoratorProps.label + "：" + _(e[0].messages)
-            ))
             reject(e)
         })
       })
@@ -757,24 +566,8 @@ export default {
 }
 </script>
 <style scoped>
-/deep/ .required>label::before {
-  display: inline-block;
-  margin-right: 4px;
-  color: #ff4d4f !important;
-  font-size: 14px;
-  font-family: SimSun, sans-serif;
-  line-height: 1;
-  content: '*';
-}
-
-/deep/ .el-input {
-  width: unset;
-}
-
-/deep/ .el-form-item>label:after {
-  content: ":";
-  position: relative;
-  top: -0.5px;
-  margin: 0 8px 0 2px;
+/deep/ form>div{
+  display: flex !important;
+  flex-wrap: wrap;
 }
 </style>

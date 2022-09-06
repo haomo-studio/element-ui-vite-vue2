@@ -981,6 +981,30 @@
     "@formily/shared" "2.2.2"
     "@formily/validator" "2.2.2"
 
+"@formily/element@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.npmjs.org/@formily/element/-/element-2.2.2.tgz"
+  integrity sha512-Z0+4QUkiiLcRBX6iVLjUUA9oAqw8uFsOW4GCrevTIfH33yqj7supk3xUNPy7aLw+HAxYsteeNKUARazxZI5c/g==
+  dependencies:
+    "@formily/core" "2.2.2"
+    "@formily/grid" "2.2.2"
+    "@formily/json-schema" "2.2.2"
+    "@formily/reactive" "2.2.2"
+    "@formily/reactive-vue" "2.2.2"
+    "@formily/shared" "2.2.2"
+    "@formily/vue" "2.2.2"
+    portal-vue "^2.1.7"
+    vue-demi "^0.13.6"
+    vue-slicksort "^1.2.0"
+
+"@formily/grid@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.npmjs.org/@formily/grid/-/grid-2.2.2.tgz"
+  integrity sha512-8zG1sCluvMPgasBlJCg1Yo59egSKMJH5LOtlF5DdveIM1T8RYUDVB4RPcN7HEUu+u4eBhFudo39ptPvOHmSGKg==
+  dependencies:
+    "@formily/reactive" "2.2.2"
+    "@juggle/resize-observer" "^3.3.1"
+
 "@formily/json-schema@2.2.2":
   version "2.2.2"
   resolved "https://registry.npmjs.org/@formily/json-schema/-/json-schema-2.2.2.tgz"
@@ -1028,7 +1052,7 @@
   dependencies:
     "@formily/shared" "2.2.2"
 
-"@formily/vue@^2.2.2":
+"@formily/vue@2.2.2", "@formily/vue@^2.2.2":
   version "2.2.2"
   resolved "https://registry.npmjs.org/@formily/vue/-/vue-2.2.2.tgz"
   integrity sha512-f66tLOBJAiFj3iwh8QLuanAzXUJUHENoVXnT0HLzfmi4XqASzuQQrX2XaXaiB1RQv/I5BtL+88P4W27vt6B+oQ==
@@ -1112,6 +1136,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@juggle/resize-observer@^3.3.1":
+  version "3.4.0"
+  resolved "https://registry.npmjs.org/@juggle/resize-observer/-/resize-observer-3.4.0.tgz"
+  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
   version "2.1.8-no-fsevents.3"
@@ -1214,6 +1243,11 @@
     "@babel/parser" "^7.18.4"
     postcss "^8.4.14"
     source-map "^0.6.1"
+
+"@vue/composition-api@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.npmmirror.com/@vue/composition-api/-/composition-api-1.7.0.tgz#26fae79e5023fc6c9dfd99ca5d3d357e1c5b9c60"
+  integrity sha512-hxOgLYR+wjuPX9bkP2pAPlqUs98XxBoa9DSLyp1z6+YR92wC42PZcZKs4d+VRtcv4udOv041Kss+F6ap5nj8YA==
 
 "@vue/devtools-api@^6.1.4":
   version "6.2.0"
@@ -2274,7 +2308,7 @@ ignore@^5.2.0:
 
 immutable@^4.0.0:
   version "4.1.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/immutable/-/immutable-4.1.0.tgz"
+  resolved "https://registry.npmmirror.com/immutable/-/immutable-4.1.0.tgz#f795787f0db780183307b9eb2091fcac1f6fafef"
   integrity sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==
 
 import-fresh@^3.0.0, import-fresh@^3.2.1:
@@ -2433,6 +2467,11 @@ jsonschemav@^1.0.7:
   integrity sha512-sr8WoZ2k87jafa7zZtdZb6EOjGKjduJd2xcADjmhLt/y4bpaIPaBWA2g+iMvlTpBvgo/4xbuKYxSWy2GCD+CxA==
   dependencies:
     clone "^2.1.1"
+
+klona@^2.0.4:
+  version "2.0.5"
+  resolved "https://registry.npmmirror.com/klona/-/klona-2.0.5.tgz#d166574d90076395d9963aa7a928fabb8d76afbc"
+  integrity sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==
 
 levn@^0.4.1:
   version "0.4.1"
@@ -2746,6 +2785,11 @@ natural-compare@^1.4.0:
   resolved "https://mirrors.cloud.tencent.com/npm/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
+neo-async@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.npmmirror.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+  integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
 no-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/no-case/-/no-case-3.0.4.tgz"
@@ -2904,6 +2948,11 @@ pinia@^2.0.14:
   dependencies:
     "@vue/devtools-api" "^6.1.4"
     vue-demi "*"
+
+portal-vue@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.npmjs.org/portal-vue/-/portal-vue-2.1.7.tgz"
+  integrity sha512-+yCno2oB3xA7irTt0EU5Ezw22L2J51uKAacE/6hMPMoO/mx3h4rXFkkBkT4GFsMDv/vEe8TNKC3ujJJ0PTwb6g==
 
 postcss-selector-parser@^6.0.9:
   version "6.0.10"
@@ -3119,10 +3168,18 @@ safe-buffer@~5.1.1:
   resolved "https://registry.npmmirror.com/safe-buffer/-/safe-buffer-5.1.2.tgz"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
-sass@^1.53.0:
-  version "1.53.0"
-  resolved "https://mirrors.tencent.com/npm/sass/-/sass-1.53.0.tgz"
-  integrity sha512-zb/oMirbKhUgRQ0/GFz8TSAwRq2IlR29vOUJZOx0l8sV+CkHUfHa4u5nqrG+1VceZp7Jfj59SVW9ogdhTvJDcQ==
+sass-loader@^13.0.2:
+  version "13.0.2"
+  resolved "https://registry.npmmirror.com/sass-loader/-/sass-loader-13.0.2.tgz#e81a909048e06520e9f2ff25113a801065adb3fe"
+  integrity sha512-BbiqbVmbfJaWVeOOAu2o7DhYWtcNmTfvroVgFXa6k2hHheMxNAeDHLNoDy/Q5aoaVlz0LH+MbMktKwm9vN/j8Q==
+  dependencies:
+    klona "^2.0.4"
+    neo-async "^2.6.2"
+
+sass@^1.54.8:
+  version "1.54.8"
+  resolved "https://registry.npmmirror.com/sass/-/sass-1.54.8.tgz#4adef0dd86ea2b1e4074f551eeda4fc5f812a996"
+  integrity sha512-ib4JhLRRgbg6QVy6bsv5uJxnJMTS2soVcCp9Y88Extyy13A8vV0G1fAwujOzmNkFQbR3LvedudAMbtuNRPbQww==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -3509,6 +3566,11 @@ vue-router@^3.5.4:
   version "3.5.4"
   resolved "https://mirrors.tencent.com/npm/vue-router/-/vue-router-3.5.4.tgz"
   integrity sha512-x+/DLAJZv2mcQ7glH2oV9ze8uPwcI+H+GgTgTmb5I55bCgY3+vXWIsqbYUzbBSZnwFHEJku4eoaH/x98veyymQ==
+
+vue-slicksort@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/vue-slicksort/-/vue-slicksort-1.2.0.tgz"
+  integrity sha512-k1324l+AnYy6MrpySN7PYL165z2EkvZmMe+BS7H/EugzS8IrZYRtoqa3QxSSWB34C7cplV1hj3c+7peKpxpYxg==
 
 vue-template-compiler@^2.6.14:
   version "2.7.10"

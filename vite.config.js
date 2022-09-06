@@ -106,7 +106,18 @@ export default defineConfig({
       {
         find: "/@/pages",
         replacement: resolve(__dirname, "src/pages"),
+      },
+      {
+        find: /^~(.*)$/,
+        replacement: '$1'
       }
     ],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+
+      }
+    }
+  }
 })
