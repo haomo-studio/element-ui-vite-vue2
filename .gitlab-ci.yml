@@ -1,0 +1,27 @@
+# 定义 stages
+stages:
+  - built_in_deploy
+  - publish
+  
+
+
+built_in_deploy:
+  stage: built_in_deploy
+  cache: {}
+  tags:
+    - block-design-live
+  script:
+    - bash ./built-in-deploy.sh
+  only:
+    - master
+
+publish:
+  stage: publish
+  tags:
+    - block-design-live
+  script:
+    - cd docker && cp /home/gitlab-runner/.tmp/id_rsa* ./ && cp /home/gitlab-runner/.tmp/install.zsh.sh ./ && cp /home/gitlab-runner/.tmp/zshrc ./
+    - docker build -t registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:element-ui-vite-vue2 . --no-cache
+    - docker push registry.cn-shenzhen.aliyuncs.com/block-design/block-design-live:element-ui-vite-vue2
+  only:
+    - master
