@@ -9,6 +9,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -19,6 +20,7 @@
     },
     {
       "kind": "prop",
+      "description": "低中分界线值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -29,6 +31,7 @@
     },
     {
       "kind": "prop",
+      "description": "中高分界线值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -39,6 +42,7 @@
     },
     {
       "kind": "prop",
+      "description": "最大分值",
       "keywords": [],
       "visibility": "public",
       "type": "number",

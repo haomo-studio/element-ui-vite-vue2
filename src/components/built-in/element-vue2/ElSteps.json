@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "步骤间距",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -27,6 +28,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前激活步骤",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -36,6 +38,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示方向",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -46,6 +49,7 @@
     },
     {
       "kind": "prop",
+      "description": "进行居中对齐",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -55,6 +59,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否简洁风格",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -64,6 +69,7 @@
     },
     {
       "kind": "prop",
+      "description": "结束步骤状态",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -74,6 +80,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前步骤状态",
       "keywords": [],
       "visibility": "public",
       "type": "string",

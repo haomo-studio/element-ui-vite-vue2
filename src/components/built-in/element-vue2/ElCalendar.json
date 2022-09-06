@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -20,6 +21,7 @@
     },
     {
       "kind": "prop",
+      "description": "时间范围",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -29,6 +31,7 @@
     },
     {
       "kind": "prop",
+      "description": "周起始日",
       "keywords": [],
       "visibility": "public",
       "type": "number",

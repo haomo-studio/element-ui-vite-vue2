@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "触发方式",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -32,6 +33,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示延迟",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -42,6 +44,7 @@
     },
     {
       "kind": "prop",
+      "description": "隐藏延迟",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -52,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -61,6 +65,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示弹出框",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -70,6 +75,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示的内容",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -79,6 +85,7 @@
     },
     {
       "kind": "prop",
+      "description": "插槽文字",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -88,6 +95,7 @@
     },
     {
       "kind": "prop",
+      "description": "添加类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -97,6 +105,7 @@
     },
     {
       "kind": "prop",
+      "description": "宽度",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -106,6 +115,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示提示箭头",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -116,6 +126,7 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -126,6 +137,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义渐变动画",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -136,6 +148,7 @@
     },
     {
       "kind": "prop",
+      "description": "弹出框索引",
       "keywords": [],
       "visibility": "public",
       "type": "number",

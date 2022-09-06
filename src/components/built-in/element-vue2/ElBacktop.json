@@ -17,6 +17,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "滚动高度出现",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -27,6 +28,7 @@
     },
     {
       "kind": "prop",
+      "description": "触发滚动对象",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -38,6 +40,7 @@
     },
     {
       "kind": "prop",
+      "description": "右边距",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -48,6 +51,7 @@
     },
     {
       "kind": "prop",
+      "description": "底部距离",
       "keywords": [],
       "visibility": "public",
       "type": "number",

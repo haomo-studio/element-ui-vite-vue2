@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "初始索引",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -25,6 +26,7 @@
     },
     {
       "kind": "prop",
+      "description": "走马灯的高度",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -34,6 +36,7 @@
     },
     {
       "kind": "prop",
+      "description": "指示器的触发",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -44,6 +47,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否自动切换",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -54,6 +58,7 @@
     },
     {
       "kind": "prop",
+      "description": "切换时间间隔",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -64,6 +69,7 @@
     },
     {
       "kind": "prop",
+      "description": "指示器的位置",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -73,6 +79,7 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -83,6 +90,7 @@
     },
     {
       "kind": "prop",
+      "description": "箭头显示时机",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -93,6 +101,7 @@
     },
     {
       "kind": "prop",
+      "description": "走马灯的类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -102,6 +111,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否循环显示",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -112,6 +122,7 @@
     },
     {
       "kind": "prop",
+      "description": "展示的方向",
       "keywords": [],
       "visibility": "public",
       "type": "string",

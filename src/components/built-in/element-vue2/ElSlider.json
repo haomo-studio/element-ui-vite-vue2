@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "最小值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -17,6 +18,7 @@
     },
     {
       "kind": "prop",
+      "description": "最大值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -27,6 +29,7 @@
     },
     {
       "kind": "prop",
+      "description": "步长",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -37,6 +40,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -50,6 +54,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示输入框",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -60,6 +65,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示控制按钮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -70,6 +76,7 @@
     },
     {
       "kind": "prop",
+      "description": "输入框的尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -80,6 +87,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示间断点",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -90,6 +98,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示提示框",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -100,6 +109,7 @@
     },
     {
       "kind": "prop",
+      "description": "格式化提示消息",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -109,6 +119,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -119,6 +130,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否范围选择",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -129,6 +141,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否竖向模式",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -139,6 +152,7 @@
     },
     {
       "kind": "prop",
+      "description": "滑块高度",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -148,6 +162,7 @@
     },
     {
       "kind": "prop",
+      "description": "去抖延迟",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -158,6 +173,7 @@
     },
     {
       "kind": "prop",
+      "description": "屏幕标签",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -167,6 +183,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义提示类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -176,6 +193,7 @@
     },
     {
       "kind": "prop",
+      "description": "标记",
       "keywords": [],
       "visibility": "public",
       "type": "object",

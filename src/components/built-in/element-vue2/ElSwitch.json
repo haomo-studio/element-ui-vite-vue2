@@ -9,6 +9,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -23,6 +24,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -33,6 +35,7 @@
     },
     {
       "kind": "prop",
+      "description": "开关宽度",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -43,6 +46,7 @@
     },
     {
       "kind": "prop",
+      "description": "打开图标类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -53,6 +57,7 @@
     },
     {
       "kind": "prop",
+      "description": "关闭图标类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -63,6 +68,7 @@
     },
     {
       "kind": "prop",
+      "description": "打开文字描述",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -72,6 +78,7 @@
     },
     {
       "kind": "prop",
+      "description": "关闭文字描述",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -81,6 +88,7 @@
     },
     {
       "kind": "prop",
+      "description": "打开的背景色",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -91,6 +99,7 @@
     },
     {
       "kind": "prop",
+      "description": "关闭的背景色",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -101,6 +110,7 @@
     },
     {
       "kind": "prop",
+      "description": "打开时的值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -115,6 +125,7 @@
     },
     {
       "kind": "prop",
+      "description": "关闭时的值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -129,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -139,6 +151,7 @@
     },
     {
       "kind": "prop",
+      "description": "触发表单校验",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -149,6 +162,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性id",
       "keywords": [],
       "visibility": "public",
       "type": "string",

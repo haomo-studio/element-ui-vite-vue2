@@ -17,6 +17,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "是否手风琴",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

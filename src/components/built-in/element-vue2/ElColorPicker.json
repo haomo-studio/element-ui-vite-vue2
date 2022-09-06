@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -16,6 +17,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否支持透明",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -25,6 +27,7 @@
     },
     {
       "kind": "prop",
+      "description": "颜色的格式",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -34,6 +37,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -43,6 +47,7 @@
     },
     {
       "kind": "prop",
+      "description": "尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -52,6 +57,7 @@
     },
     {
       "kind": "prop",
+      "description": "下拉框的类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -61,6 +67,7 @@
     },
     {
       "kind": "prop",
+      "description": "预定义颜色",
       "keywords": [],
       "visibility": "public",
       "type": "array",

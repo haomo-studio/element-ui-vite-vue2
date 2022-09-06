@@ -31,6 +31,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "属性名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -40,6 +41,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性id",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -49,6 +51,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -58,6 +61,7 @@
     },
     {
       "kind": "prop",
+      "description": "自动完成",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -68,6 +72,7 @@
     },
     {
       "kind": "prop",
+      "description": "自动完成",
       "keywords": [
         {
           "name": "Deprecated",
@@ -82,6 +87,7 @@
     },
     {
       "kind": "prop",
+      "description": "自动弹出菜单",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -91,6 +97,7 @@
     },
     {
       "kind": "prop",
+      "description": "输入框尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -100,6 +107,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -109,6 +117,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否清空选项",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -118,6 +127,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否可搜索",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -127,6 +137,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否创建条目",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -136,6 +147,7 @@
     },
     {
       "kind": "prop",
+      "description": "远程获取数据",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -145,6 +157,7 @@
     },
     {
       "kind": "prop",
+      "description": "下拉框的类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -154,6 +167,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否远程搜索",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -163,6 +177,7 @@
     },
     {
       "kind": "prop",
+      "description": "远程加载显示文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -172,6 +187,7 @@
     },
     {
       "kind": "prop",
+      "description": "无匹配的文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -181,6 +197,7 @@
     },
     {
       "kind": "prop",
+      "description": "空显示的文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -190,6 +207,7 @@
     },
     {
       "kind": "prop",
+      "description": "远程搜索方法",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -199,6 +217,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义搜索方法",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -208,6 +227,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否多选",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -217,6 +237,7 @@
     },
     {
       "kind": "prop",
+      "description": "选择的项目数",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -227,6 +248,7 @@
     },
     {
       "kind": "prop",
+      "description": "占位符",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -236,6 +258,7 @@
     },
     {
       "kind": "prop",
+      "description": "第一个匹配项",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -245,6 +268,7 @@
     },
     {
       "kind": "prop",
+      "description": "保留搜索词",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -254,6 +278,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值的键名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -264,6 +289,7 @@
     },
     {
       "kind": "prop",
+      "description": "选中展示文字",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -273,6 +299,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示弹出框",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

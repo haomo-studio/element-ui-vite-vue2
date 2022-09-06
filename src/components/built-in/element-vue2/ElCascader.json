@@ -17,6 +17,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "选中项绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -26,6 +27,7 @@
     },
     {
       "kind": "prop",
+      "description": "数据源",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -35,6 +37,7 @@
     },
     {
       "kind": "prop",
+      "description": "配置选项",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -44,6 +47,7 @@
     },
     {
       "kind": "prop",
+      "description": "尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -53,6 +57,7 @@
     },
     {
       "kind": "prop",
+      "description": "占位文本",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -63,6 +68,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -72,6 +78,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否支持清空",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -81,6 +88,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否可搜索",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -90,6 +98,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义搜索逻辑",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -99,6 +108,7 @@
     },
     {
       "kind": "prop",
+      "description": "选项分隔符",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -109,6 +119,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示选中路径",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -119,6 +130,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否折叠标签",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -128,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description": "去抖延迟",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -138,6 +151,7 @@
     },
     {
       "kind": "prop",
+      "description": "过滤参数",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -148,6 +162,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义浮层类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",

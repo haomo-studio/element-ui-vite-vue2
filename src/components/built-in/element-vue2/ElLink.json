@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -32,6 +33,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否下划线",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -42,6 +44,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用状态",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -51,6 +54,7 @@
     },
     {
       "kind": "prop",
+      "description": "跳转链接",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -60,6 +64,7 @@
     },
     {
       "kind": "prop",
+      "description": "图标类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",

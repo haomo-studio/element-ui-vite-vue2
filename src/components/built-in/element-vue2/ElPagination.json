@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "当前页数",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -16,6 +17,7 @@
     },
     {
       "kind": "prop",
+      "description": "总页数",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -25,6 +27,7 @@
     },
     {
       "kind": "prop",
+      "description": "页码按钮数量",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -34,6 +37,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

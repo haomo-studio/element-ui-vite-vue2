@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "数据源",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -32,6 +33,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义列表标题",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -42,6 +44,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义按钮文案",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -52,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description": "搜索框占位符",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -62,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义搜索方法",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -71,6 +76,7 @@
     },
     {
       "kind": "prop",
+      "description": "左侧勾选数组",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -81,6 +87,7 @@
     },
     {
       "kind": "prop",
+      "description": "右侧勾选数组",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -91,6 +98,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义数据函数",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -100,6 +108,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -110,6 +119,7 @@
     },
     {
       "kind": "prop",
+      "description": "顶部勾选文案",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -120,6 +130,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否可搜索",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -129,6 +140,7 @@
     },
     {
       "kind": "prop",
+      "description": "字段别名",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -139,6 +151,7 @@
     },
     {
       "kind": "prop",
+      "description": "右侧排序策略",
       "keywords": [],
       "visibility": "public",
       "type": "string",

@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "计数器步长",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -17,6 +18,7 @@
     },
     {
       "kind": "prop",
+      "description": "输入步长倍数",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -27,6 +29,7 @@
     },
     {
       "kind": "prop",
+      "description": "计数器最大值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -37,6 +40,7 @@
     },
     {
       "kind": "prop",
+      "description": "计数器最小值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -47,6 +51,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -56,6 +61,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -65,6 +71,7 @@
     },
     {
       "kind": "prop",
+      "description": "计数器尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -74,6 +81,7 @@
     },
     {
       "kind": "prop",
+      "description": "使用控制按钮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -84,6 +92,7 @@
     },
     {
       "kind": "prop",
+      "description": "控制按钮位置",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -94,6 +103,7 @@
     },
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -103,6 +113,7 @@
     },
     {
       "kind": "prop",
+      "description": "标签文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -112,6 +123,7 @@
     },
     {
       "kind": "prop",
+      "description": "占位文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -121,6 +133,7 @@
     },
     {
       "kind": "prop",
+      "description": "数值精度",
       "keywords": [],
       "visibility": "public",
       "type": "number",

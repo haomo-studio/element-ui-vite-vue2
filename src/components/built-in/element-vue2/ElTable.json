@@ -29,6 +29,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "显示的数据",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -39,6 +40,7 @@
     },
     {
       "kind": "prop",
+      "description": "表格的尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -48,6 +50,7 @@
     },
     {
       "kind": "prop",
+      "description": "对应列的宽度",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -60,6 +63,7 @@
     },
     {
       "kind": "prop",
+      "description": "表格的高度",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -72,6 +76,7 @@
     },
     {
       "kind": "prop",
+      "description": "表格最大高度",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -84,6 +89,7 @@
     },
     {
       "kind": "prop",
+      "description": "列宽自动撑开",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -94,6 +100,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否为斑马纹",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -103,6 +110,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否纵向边框",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -112,6 +120,7 @@
     },
     {
       "kind": "prop",
+      "description": "行数据的Key",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -124,6 +133,7 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -133,6 +143,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否显示表头",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -143,6 +154,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示合计行",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -152,6 +164,7 @@
     },
     {
       "kind": "prop",
+      "description": "合计第一列文本",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -161,6 +174,7 @@
     },
     {
       "kind": "prop",
+      "description": "定义合计方法",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -170,6 +184,7 @@
     },
     {
       "kind": "prop",
+      "description": "行方法",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -182,6 +197,7 @@
     },
     {
       "kind": "prop",
+      "description": "行样式",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -194,6 +210,7 @@
     },
     {
       "kind": "prop",
+      "description": "单元格方法",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -206,6 +223,7 @@
     },
     {
       "kind": "prop",
+      "description": "单元格样式",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -218,6 +236,7 @@
     },
     {
       "kind": "prop",
+      "description": "表头行方法",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -230,6 +249,7 @@
     },
     {
       "kind": "prop",
+      "description": "表头行样式",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -242,6 +262,7 @@
     },
     {
       "kind": "prop",
+      "description": "表头单元格方法",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -254,6 +275,7 @@
     },
     {
       "kind": "prop",
+      "description": "表头单元格样式",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -266,6 +288,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前行高亮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -275,6 +298,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前行的key",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -287,6 +311,7 @@
     },
     {
       "kind": "prop",
+      "description": "空数据的文本",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -296,6 +321,7 @@
     },
     {
       "kind": "prop",
+      "description": "目前的展开行",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -305,6 +331,7 @@
     },
     {
       "kind": "prop",
+      "description": "默认展开所有行",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -314,6 +341,7 @@
     },
     {
       "kind": "prop",
+      "description": "默认排序",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -323,6 +351,7 @@
     },
     {
       "kind": "prop",
+      "description": "提示",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -332,6 +361,7 @@
     },
     {
       "kind": "prop",
+      "description": "合并计算方法",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -341,6 +371,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否全选",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -351,6 +382,7 @@
     },
     {
       "kind": "prop",
+      "description": "树节点的缩进",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -361,6 +393,7 @@
     },
     {
       "kind": "prop",
+      "description": "配置选项",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -371,6 +404,7 @@
     },
     {
       "kind": "prop",
+      "description": "懒加载子节点",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -380,6 +414,7 @@
     },
     {
       "kind": "prop",
+      "description": "加载子节点函数",
       "keywords": [],
       "visibility": "public",
       "type": "function",

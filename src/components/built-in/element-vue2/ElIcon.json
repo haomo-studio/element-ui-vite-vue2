@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "原生属性名",
       "keywords": [],
       "visibility": "public",
       "type": "string",

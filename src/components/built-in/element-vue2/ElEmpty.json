@@ -31,6 +31,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "图片地址",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -41,6 +42,7 @@
     },
     {
       "kind": "prop",
+      "description": "图片大小",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -50,6 +52,7 @@
     },
     {
       "kind": "prop",
+      "description": "文本描述",
       "keywords": [],
       "visibility": "public",
       "type": "string",

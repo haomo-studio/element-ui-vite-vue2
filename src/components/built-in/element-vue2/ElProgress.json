@@ -7,6 +7,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "进度条类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -17,6 +18,7 @@
     },
     {
       "kind": "prop",
+      "description": "百分比",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -27,6 +29,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前状态",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -36,6 +39,7 @@
     },
     {
       "kind": "prop",
+      "description": "进度条的宽度",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -46,6 +50,7 @@
     },
     {
       "kind": "prop",
+      "description": "两端形状",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -56,6 +61,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示内置文字",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -66,6 +72,7 @@
     },
     {
       "kind": "prop",
+      "description": "环形宽度",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -76,6 +83,7 @@
     },
     {
       "kind": "prop",
+      "description": "进度条文字",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -86,6 +94,7 @@
     },
     {
       "kind": "prop",
+      "description": "进度条背景色",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -100,6 +109,7 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "type": "function",

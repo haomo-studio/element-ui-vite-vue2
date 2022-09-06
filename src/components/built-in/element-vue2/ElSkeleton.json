@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "是否使用动画",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -32,6 +33,7 @@
     },
     {
       "kind": "prop",
+      "description": "渲染模板数量",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -42,6 +44,7 @@
     },
     {
       "kind": "prop",
+      "description": "段落数量",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -52,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否显示",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -62,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description": "渲染的时间",
       "keywords": [],
       "visibility": "public",
       "type": "number",

@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "表单数据对象",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -24,6 +25,7 @@
     },
     {
       "kind": "prop",
+      "description": "表单验证规则",
       "keywords": [],
       "visibility": "public",
       "type": "object",
@@ -33,6 +35,7 @@
     },
     {
       "kind": "prop",
+      "description": "标签的位置",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -42,6 +45,7 @@
     },
     {
       "kind": "prop",
+      "description": "标签的宽度",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -51,6 +55,7 @@
     },
     {
       "kind": "prop",
+      "description": "标签的后缀",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -61,6 +66,7 @@
     },
     {
       "kind": "prop",
+      "description": "行内表单模式",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -70,6 +76,7 @@
     },
     {
       "kind": "prop",
+      "description": "行内校验信息",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -79,6 +86,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示校验图标",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -88,6 +96,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示错误信息",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -98,6 +107,7 @@
     },
     {
       "kind": "prop",
+      "description": "组件的尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -107,6 +117,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用表单",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -116,6 +127,7 @@
     },
     {
       "kind": "prop",
+      "description": "rules改变触发校验",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -126,6 +138,7 @@
     },
     {
       "kind": "prop",
+      "description": "隐藏必填星号",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

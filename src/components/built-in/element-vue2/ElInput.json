@@ -38,6 +38,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -50,6 +51,7 @@
     },
     {
       "kind": "prop",
+      "description": "输入框尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -59,6 +61,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否能缩放",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -68,6 +71,7 @@
     },
     {
       "kind": "prop",
+      "description": "表单",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -77,6 +81,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -86,6 +91,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否只读",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -95,6 +101,7 @@
     },
     {
       "kind": "prop",
+      "description": "类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -105,6 +112,7 @@
     },
     {
       "kind": "prop",
+      "description": "自动获取焦点",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -118,6 +126,7 @@
     },
     {
       "kind": "prop",
+      "description": "自动补全",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -128,6 +137,7 @@
     },
     {
       "kind": "prop",
+      "description": "自动补全",
       "keywords": [
         {
           "name": "Deprecated",
@@ -142,6 +152,7 @@
     },
     {
       "kind": "prop",
+      "description": "输入触发校验",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -152,6 +163,7 @@
     },
     {
       "kind": "prop",
+      "description": "尾部图标",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -161,6 +173,7 @@
     },
     {
       "kind": "prop",
+      "description": "头部图标",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -170,6 +183,7 @@
     },
     {
       "kind": "prop",
+      "description": "标签文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -179,6 +193,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否可清空",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -189,6 +204,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示切换密码图标",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -199,6 +215,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示字数统计",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -209,6 +226,7 @@
     },
     {
       "kind": "prop",
+      "description": "输入框索引",
       "keywords": [],
       "visibility": "public",
       "type": "string",

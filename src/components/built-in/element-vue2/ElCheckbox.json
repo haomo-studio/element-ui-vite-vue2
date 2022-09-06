@@ -18,6 +18,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -27,6 +28,7 @@
     },
     {
       "kind": "prop",
+      "description": "选中状态的值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -36,6 +38,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否全选",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -45,6 +48,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -54,6 +58,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前是否勾选",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -63,6 +68,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -72,6 +78,7 @@
     },
     {
       "kind": "prop",
+      "description": "选中时的值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -84,6 +91,7 @@
     },
     {
       "kind": "prop",
+      "description": "未选中时的值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -96,6 +104,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性id",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -125,6 +134,7 @@
     },
     {
       "kind": "prop",
+      "description": "尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",

@@ -22,6 +22,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -31,6 +32,7 @@
     },
     {
       "kind": "prop",
+      "description": "内容",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -40,6 +42,7 @@
     },
     {
       "kind": "prop",
+      "description": "阴影显示时机",
       "keywords": [],
       "visibility": "public",
       "type": "string",

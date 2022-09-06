@@ -18,6 +18,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "输入框尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -27,6 +28,7 @@
     },
     {
       "kind": "prop",
+      "description": "日期格式",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -36,6 +38,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值的格式",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -45,6 +48,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否只读",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -54,6 +58,7 @@
     },
     {
       "kind": "prop",
+      "description": "占位文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -63,6 +68,7 @@
     },
     {
       "kind": "prop",
+      "description": "开始占位文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -72,6 +78,7 @@
     },
     {
       "kind": "prop",
+      "description": "结束占位文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -81,6 +88,7 @@
     },
     {
       "kind": "prop",
+      "description": "头部图标类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -90,6 +98,7 @@
     },
     {
       "kind": "prop",
+      "description": "清空图标类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -100,6 +109,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性名",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -110,6 +120,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -119,6 +130,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示清除按钮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -129,6 +141,7 @@
     },
     {
       "kind": "prop",
+      "description": "属性id",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -139,6 +152,7 @@
     },
     {
       "kind": "prop",
+      "description": "下拉框的类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -148,6 +162,7 @@
     },
     {
       "kind": "prop",
+      "description": "文本框可输入",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -158,6 +173,7 @@
     },
     {
       "kind": "prop",
+      "description": "对齐方式",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -168,6 +184,7 @@
     },
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -177,6 +194,7 @@
     },
     {
       "kind": "prop",
+      "description": "默认显示时间",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -186,6 +204,7 @@
     },
     {
       "kind": "prop",
+      "description": "当日具体时刻",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -195,6 +214,7 @@
     },
     {
       "kind": "prop",
+      "description": "日期分隔符",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -205,6 +225,7 @@
     },
     {
       "kind": "prop",
+      "description": "当前时间选项",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -214,6 +235,7 @@
     },
     {
       "kind": "prop",
+      "description": "取消日期联动",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -223,6 +245,7 @@
     },
     {
       "kind": "prop",
+      "description": "触发表单校验",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

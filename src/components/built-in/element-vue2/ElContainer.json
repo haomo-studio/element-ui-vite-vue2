@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "排列方向",
       "keywords": [],
       "visibility": "public",
       "type": "string",

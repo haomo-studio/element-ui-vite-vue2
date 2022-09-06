@@ -29,6 +29,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -39,6 +40,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否要遮罩层",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -49,6 +51,7 @@
     },
     {
       "kind": "prop",
+      "description": "遮罩层插入元素上",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -59,6 +62,7 @@
     },
     {
       "kind": "prop",
+      "description": "对话框插入元素上",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -69,6 +73,7 @@
     },
     {
       "kind": "prop",
+      "description": "出现对话框锁定滚动",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -79,6 +84,7 @@
     },
     {
       "kind": "prop",
+      "description": "点击modal关闭",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -89,6 +95,7 @@
     },
     {
       "kind": "prop",
+      "description": "按ESC关闭",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -99,6 +106,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示关闭按钮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -109,6 +117,7 @@
     },
     {
       "kind": "prop",
+      "description": "对话框宽度",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -118,6 +127,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否为全屏",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -127,6 +137,7 @@
     },
     {
       "kind": "prop",
+      "description": "自定义类名",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -137,6 +148,7 @@
     },
     {
       "kind": "prop",
+      "description": "上边距",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -147,6 +159,7 @@
     },
     {
       "kind": "prop",
+      "description": "关闭前的回调",
       "keywords": [],
       "visibility": "public",
       "type": "function",
@@ -156,6 +169,7 @@
     },
     {
       "kind": "prop",
+      "description": "采用居中布局",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -166,6 +180,7 @@
     },
     {
       "kind": "prop",
+      "description": "关闭销毁元素",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

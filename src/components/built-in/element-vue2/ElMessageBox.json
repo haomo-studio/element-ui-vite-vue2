@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "是否需要遮罩层",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -25,6 +26,7 @@
     },
     {
       "kind": "prop",
+      "description": "出现弹窗锁定滚动",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -35,6 +37,7 @@
     },
     {
       "kind": "prop",
+      "description": "显示关闭按钮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -45,6 +48,7 @@
     },
     {
       "kind": "prop",
+      "description": "点击遮罩关闭",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -55,6 +59,7 @@
     },
     {
       "kind": "prop",
+      "description": "ESC关闭弹窗",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -65,6 +70,7 @@
     },
     {
       "kind": "prop",
+      "description": "",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -75,6 +81,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否居中布局",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -85,6 +92,7 @@
     },
     {
       "kind": "prop",
+      "description": "使用圆角按钮",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

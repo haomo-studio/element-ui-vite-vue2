@@ -36,6 +36,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -46,6 +47,7 @@
     },
     {
       "kind": "prop",
+      "description": "二级标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -56,6 +58,7 @@
     },
     {
       "kind": "prop",
+      "description": "图标类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",

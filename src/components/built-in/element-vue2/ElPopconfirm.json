@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -24,6 +25,7 @@
     },
     {
       "kind": "prop",
+      "description": "确认按钮文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -33,6 +35,7 @@
     },
     {
       "kind": "prop",
+      "description": "取消按钮文字",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -42,6 +45,7 @@
     },
     {
       "kind": "prop",
+      "description": "确认按钮类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -52,6 +56,7 @@
     },
     {
       "kind": "prop",
+      "description": "取消按钮类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -62,6 +67,7 @@
     },
     {
       "kind": "prop",
+      "description": "图标",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -72,6 +78,7 @@
     },
     {
       "kind": "prop",
+      "description": "图标颜色",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -82,6 +89,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否隐藏图标",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",

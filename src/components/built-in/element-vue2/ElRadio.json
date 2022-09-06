@@ -17,6 +17,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "绑定值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -26,6 +27,7 @@
     },
     {
       "kind": "prop",
+      "description": "选中状态的值",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -35,6 +37,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否禁用",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -44,6 +47,7 @@
     },
     {
       "kind": "prop",
+      "description": "标题",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -53,6 +57,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否显示边框",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -62,6 +67,7 @@
     },
     {
       "kind": "prop",
+      "description": "单选框尺寸",
       "keywords": [],
       "visibility": "public",
       "type": "string",

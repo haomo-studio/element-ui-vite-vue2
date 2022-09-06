@@ -15,6 +15,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "显示值",
       "keywords": [],
       "visibility": "public",
       "type": [
@@ -27,6 +28,7 @@
     },
     {
       "kind": "prop",
+      "description": "最大值",
       "keywords": [],
       "visibility": "public",
       "type": "number",
@@ -36,6 +38,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否显示圆点",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -45,6 +48,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否显示标记",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -54,6 +58,7 @@
     },
     {
       "kind": "prop",
+      "description": "类型",
       "keywords": [],
       "visibility": "public",
       "type": "string",

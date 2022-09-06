@@ -24,6 +24,7 @@
   "props": [
     {
       "kind": "prop",
+      "description": "图片源",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -33,6 +34,7 @@
     },
     {
       "kind": "prop",
+      "description": "图片显示样式",
       "keywords": [],
       "visibility": "public",
       "type": "string",
@@ -42,6 +44,7 @@
     },
     {
       "kind": "prop",
+      "description": "是否懒加载",
       "keywords": [],
       "visibility": "public",
       "type": "boolean",
@@ -51,6 +54,7 @@
     },
     {
       "kind": "prop",
+      "description": "监听滚动事件",
       "keywords": [],
       "visibility": "public",
       "type": "unknown",
@@ -60,6 +64,7 @@
     },
     {
       "kind": "prop",
+      "description": "开启图片预览",
       "keywords": [],
       "visibility": "public",
       "type": "array",
@@ -70,6 +75,7 @@
     },
     {
       "kind": "prop",
+      "description": "图片预览层级",
       "keywords": [],
       "visibility": "public",
       "type": "number",
