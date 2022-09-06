@@ -36,7 +36,7 @@ set -e
 # Default settings
 ZSH=${ZSH:-~/.oh-my-zsh}
 REPO=${REPO:-ohmyzsh/ohmyzsh}
-REMOTE=${REMOTE:-https://hub.fastgit.xyz/${REPO}.git}
+REMOTE=${REMOTE:-https://gitclone.com/github.com/${REPO}.git}
 BRANCH=${BRANCH:-master}
 
 # Other options
