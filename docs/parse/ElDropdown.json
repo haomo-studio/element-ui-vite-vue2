@@ -1,15 +1,441 @@
 {
   "inheritAttrs": true,
-  "errors": [
-    "Unexpected token, expected \",\" (266:24)"
-  ],
+  "errors": [],
   "warnings": [],
   "keywords": [],
   "slots": [],
-  "props": [],
-  "data": [],
-  "computed": [],
-  "events": [],
-  "methods": [],
-  "name": "dropdown"
+  "props": [
+    {
+      "kind": "prop",
+      "description": "触发下拉行为",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "trigger",
+      "default": "\"hover\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单按钮类型",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "size",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "下拉为按钮组",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "split-button",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击选项隐藏菜单",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "hide-on-click",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单弹出位置",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "placement",
+      "default": "\"bottom-end\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "visible-arrow",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "展开菜单延时",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "show-timeout",
+      "default": "250",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "收起拉菜单延时",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "hide-timeout",
+      "default": "150",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单索引",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "tabindex",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否禁用",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disabled",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "timeout",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "visible",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "triggerElm",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "menuItems",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "menuItemsArray",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "dropdownElm",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "focusing",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "listId",
+      "initialValue": "`dropdown-menu-${generateId()}`"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "dropdownSize",
+      "dependencies": [
+        "size",
+        "$ELEMENT"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "visible-change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "command",
+      "arguments": [
+        {
+          "name": "command",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "instance",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMigratingConfig",
+      "params": [],
+      "syntax": [
+        "getMigratingConfig(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "show",
+      "params": [],
+      "syntax": [
+        "show(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide",
+      "params": [],
+      "syntax": [
+        "hide(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleClick",
+      "params": [],
+      "syntax": [
+        "handleClick(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleTriggerKeyDown",
+      "params": [
+        {
+          "name": "ev",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleTriggerKeyDown(ev: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleItemKeyDown",
+      "params": [
+        {
+          "name": "ev",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleItemKeyDown(ev: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetTabindex",
+      "params": [
+        {
+          "name": "ele",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "resetTabindex(ele: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "removeTabindex",
+      "params": [],
+      "syntax": [
+        "removeTabindex(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initAria",
+      "params": [],
+      "syntax": [
+        "initAria(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initEvent",
+      "params": [],
+      "syntax": [
+        "initEvent(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleMenuItemClick",
+      "params": [
+        {
+          "name": "command",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "instance",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleMenuItemClick(command: unknown, instance: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "triggerElmFocus",
+      "params": [],
+      "syntax": [
+        "triggerElmFocus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initDomOperation",
+      "params": [],
+      "syntax": [
+        "initDomOperation(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElDropdown"
 }

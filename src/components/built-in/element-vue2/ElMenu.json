@@ -1,15 +1,553 @@
 {
   "inheritAttrs": true,
-  "errors": [
-    "Unexpected token, expected \",\" (13:10)"
-  ],
+  "errors": [],
   "warnings": [],
   "keywords": [],
   "slots": [],
-  "props": [],
-  "data": [],
-  "computed": [],
-  "events": [],
-  "methods": [],
-  "name": "menu"
+  "props": [
+    {
+      "kind": "prop",
+      "description": "模式",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "mode",
+      "default": "\"vertical\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前菜单索引",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "default-active",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "当前索引数组",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "default-openeds",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "保持一个菜单展开",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "unique-opened",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "导航模式",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "router",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "子菜单触发方式",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "menu-trigger",
+      "default": "\"hover\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "收起菜单",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "collapse",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单的背景色",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "background-color",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "菜单文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "text-color",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "激活菜单文字颜色",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "active-text-color",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "开启折叠动画",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "collapse-transition",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "activeIndex",
+      "initialValue": "this.defaultActive"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "openedMenus",
+      "initialValue": "(this.defaultOpeneds && !this.collapse) ? this.defaultOpeneds.slice(0) : []"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "items",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "submenus",
+      "initialValue": "{}"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "hoverBackground",
+      "dependencies": [
+        "backgroundColor",
+        "mixColor"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isMenuPopup",
+      "dependencies": [
+        "mode",
+        "collapse"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "indexPath",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "indexPath",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "select",
+      "arguments": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "indexPath",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateActiveIndex",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "updateActiveIndex(val: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMigratingConfig",
+      "params": [],
+      "syntax": [
+        "getMigratingConfig(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getColorChannels",
+      "params": [
+        {
+          "name": "color",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getColorChannels(color: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "mixColor",
+      "params": [
+        {
+          "name": "color",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "percent",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "mixColor(color: unknown, percent: unknown): string"
+      ],
+      "returns": {
+        "type": "string"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "addItem",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "addItem(item: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "removeItem",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "removeItem(item: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "addSubmenu",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "addSubmenu(item: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "removeSubmenu",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "removeSubmenu(item: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "openMenu",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "indexPath",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "openMenu(index: unknown, indexPath: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "closeMenu",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "closeMenu(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleSubmenuClick",
+      "params": [
+        {
+          "name": "submenu",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleSubmenuClick(submenu: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleItemClick",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleItemClick(item: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "initialize opened menu",
+      "keywords": [],
+      "visibility": "public",
+      "name": "initOpenedMenu",
+      "params": [],
+      "syntax": [
+        "initOpenedMenu(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "routeToItem",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "onError",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "routeToItem(item: unknown, onError: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "open",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "open(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "close(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElMenu"
 }

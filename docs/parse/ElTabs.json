@@ -1,15 +1,285 @@
 {
   "inheritAttrs": true,
-  "errors": [
-    "Unexpected token, expected \",\" (129:12)"
-  ],
+  "errors": [],
   "warnings": [],
   "keywords": [],
   "slots": [],
-  "props": [],
-  "data": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "风格类型",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "active-name",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标签是否关闭",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "closable",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "标签是否增加",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "addable",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "绑定值",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "v-model",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "description": "同时增加和关闭标签",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "editable",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "选项卡位置",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "tab-position",
+      "default": "\"top\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "切换标签的值",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "before-leave",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "宽度自动撑开",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "stretch",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "currentName",
+      "initialValue": "this.value || this.activeName"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "panes",
+      "initialValue": "[]"
+    }
+  ],
   "computed": [],
-  "events": [],
-  "methods": [],
-  "name": "tabs"
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tab-click",
+      "arguments": [
+        {
+          "name": "tab",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "edit",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "\"remove\"",
+          "type": "string",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tab-remove",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "tab-add",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calcPaneInstances",
+      "params": [
+        {
+          "name": "isForceUpdate",
+          "type": "boolean",
+          "defaultValue": "false",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "calcPaneInstances(isForceUpdate: boolean = false): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleTabClick",
+      "params": [
+        {
+          "name": "tab",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "tabName",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleTabClick(tab: unknown, tabName: unknown, event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleTabRemove",
+      "params": [
+        {
+          "name": "pane",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "ev",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleTabRemove(pane: unknown, ev: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleTabAdd",
+      "params": [],
+      "syntax": [
+        "handleTabAdd(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCurrentName",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCurrentName(value: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElTabs"
 }

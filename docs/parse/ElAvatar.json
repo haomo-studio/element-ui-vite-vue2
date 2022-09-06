@@ -1,15 +1,148 @@
 {
   "inheritAttrs": true,
-  "errors": [
-    "Unexpected token, expected \",\" (73:10)"
-  ],
+  "errors": [],
   "warnings": [],
   "keywords": [],
   "slots": [],
-  "props": [],
-  "data": [],
-  "computed": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "头像的大小",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "number",
+        "string"
+      ],
+      "name": "size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像的形状",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "shape",
+      "default": "\"circle\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "头像图标类型",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "icon",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片资源地址",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "src",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图像替换文本",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "alt",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "逗号分隔图像",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "src-set",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载失败回调",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "error",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "图片适应容器",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "fit",
+      "default": "\"cover\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isImageExist",
+      "initialValue": "true"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "avatarClass",
+      "dependencies": [
+        "size",
+        "icon",
+        "shape"
+      ]
+    }
+  ],
   "events": [],
-  "methods": [],
-  "name": "main"
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleError",
+      "params": [],
+      "syntax": [
+        "handleError(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "renderAvatar",
+      "params": [],
+      "syntax": [
+        "renderAvatar(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElAvatar"
 }

@@ -1,15 +1,173 @@
 {
   "inheritAttrs": true,
-  "errors": [
-    "Unexpected token, expected \",\" (45:10)"
-  ],
+  "errors": [],
   "warnings": [],
   "keywords": [],
   "slots": [],
-  "props": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否可关闭",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "closable",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "类型",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "是否有边框",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "hit",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "禁用渐变动画",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disable-transitions",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "背景色",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "color",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "尺寸",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主题",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "effect",
+      "default": "\"light\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
   "data": [],
-  "computed": [],
-  "events": [],
-  "methods": [],
-  "name": "tag"
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "tagSize",
+      "dependencies": [
+        "size",
+        "$ELEMENT"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "close",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "click",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleClose",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleClose(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleClick",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleClick(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElTag"
 }
