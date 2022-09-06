@@ -12,6 +12,8 @@
     "parse-all": "bash scripts/parse.sh"
   },
   "dependencies": {
+    "@formily/core": "^2.2.2",
+    "@formily/vue": "^2.2.2",
     "axios": "^0.27.2",
     "echarts": "^5.3.3",
     "echarts-for-vue": "^1.4.1",

@@ -17,6 +17,11 @@ const testRoutes = [
     component: () => import('/@/pages/test/TestHmElementTable.vue')
   },
   {
+    path: '/TestHmElementFormily',
+    name: 'TestHmElementFormily',
+    component: () => import('/@/pages/test/TestHmElementFormily.vue')
+  },
+  {
     path: "/HmEchartsLineSimple",
     name: "HmEchartsLineSimple",
     component: () =>

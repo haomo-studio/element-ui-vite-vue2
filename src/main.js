@@ -4,6 +4,7 @@ import { createPinia, PiniaVuePlugin } from 'pinia'
 import router from './router'
 import VueCookie from 'vue-cookie'
 
+import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 
 import axios from 'axios';
@@ -46,6 +47,7 @@ Vue.prototype.$reduce = reduce;
 Vue.prototype.$array2tree = array2tree;
 
 Vue.use(VueCookie)
+Vue.use(ElementUI)
 Vue.use(PiniaVuePlugin)
 const pinia = createPinia()
 
