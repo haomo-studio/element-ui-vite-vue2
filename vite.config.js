@@ -5,13 +5,72 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
 import path from 'path'
 import { resolve } from "path"
+const os = require("os");
 
+
+/**
+ * 判断代码是否在服务器上的容器里运行
+ */
+ function isInServerContainer() {
+  return os.hostname().indexOf("block-design-live-pid") >= 0;
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    host: true,
     port: 3000,
+    host: "0.0.0.0",
+    hmr: {
+      overlay: false,
+    },
+    watch: {
+      ignored: [
+        "**/src/assets/**",
+        "**/tests/**",
+        "**/cypress/**",
+        "**/docker/**",
+        "**/docs/**",
+        "**/public/**",
+        // 忽略生成的json文件
+        "**/src/pages/**/config.json",
+        "**/src/pages/**/page.json",
+        // 忽略根目录下的文件
+        "**/.babelrc",
+        "**/.eslintrc.js",
+        "**/.gitignore",
+        "**/.gitlab-ci.yml",
+        "**/babel.config.js",
+        "**/cpress.json",
+        "**/index.html",
+        "**/jest.config.js",
+        "**/package*",
+        "**/README.md",
+        "**/sonar*",
+        "**/*.sh",
+        "**/vite.config.js",
+        "**/yarn.lock",
+      ].concat(
+        isInServerContainer()
+          ? [
+              "**/src/components/built-in/**",
+              "**/src/pages/test/**",
+              "**/src/router/test.js",
+              "**/src/components/HmBlock.vue",
+            ]
+          : []
+      ),
+    },
+    proxy: {
+      '/api': {
+          target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
+          changeOrigin: true,
+      },
+      '/project-api/api': {
+        target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/project-api/, ""),
+    },
+    },
   },
   plugins: [
     vue(),
@@ -47,7 +106,18 @@ export default defineConfig({
       {
         find: "/@/pages",
         replacement: resolve(__dirname, "src/pages"),
+      },
+      {
+        find: /^~(.*)$/,
+        replacement: '$1'
       }
     ],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+
+      }
+    }
+  }
 })
