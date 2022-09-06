@@ -1,0 +1,88 @@
+{
+  "inheritAttrs": true,
+  "errors": [
+    "tag <img> has no matching end tag."
+  ],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "image",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "description",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "image",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "image-size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "description",
+      "default": "\"\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "emptyDescription",
+      "dependencies": [
+        "description"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "imageStyle",
+      "dependencies": [
+        "imageSize"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "name": "ElEmpty"
+}

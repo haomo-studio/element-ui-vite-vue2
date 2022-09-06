@@ -1,0 +1,485 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "initial-index",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "height",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "trigger",
+      "default": "\"hover\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "autoplay",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "interval",
+      "default": "3000",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "indicator-position",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "indicator",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "arrow",
+      "default": "\"hover\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "loop",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "direction",
+      "default": "\"horizontal\"",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "items",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "activeIndex",
+      "initialValue": "-1"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "containerWidth",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "timer",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "hover",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "arrowDisplay",
+      "dependencies": [
+        "arrow",
+        "direction"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "hasLabel",
+      "dependencies": [
+        "items"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "carouselClasses",
+      "dependencies": [
+        "direction",
+        "type"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "indicatorsClasses",
+      "dependencies": [
+        "direction",
+        "hasLabel",
+        "indicatorPosition",
+        "type"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "oldVal",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleMouseEnter",
+      "params": [],
+      "syntax": [
+        "handleMouseEnter(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleMouseLeave",
+      "params": [],
+      "syntax": [
+        "handleMouseLeave(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "itemInStage",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "itemInStage(item: unknown, index: unknown): boolean"
+      ],
+      "returns": {
+        "type": "boolean"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleButtonEnter",
+      "params": [
+        {
+          "name": "arrow",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleButtonEnter(arrow: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleButtonLeave",
+      "params": [],
+      "syntax": [
+        "handleButtonLeave(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateItems",
+      "params": [],
+      "syntax": [
+        "updateItems(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetItemPosition",
+      "params": [
+        {
+          "name": "oldIndex",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "resetItemPosition(oldIndex: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "playSlides",
+      "params": [],
+      "syntax": [
+        "playSlides(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "pauseTimer",
+      "params": [],
+      "syntax": [
+        "pauseTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "startTimer",
+      "params": [],
+      "syntax": [
+        "startTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetTimer",
+      "params": [],
+      "syntax": [
+        "resetTimer(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setActiveItem",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setActiveItem(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prev",
+      "params": [],
+      "syntax": [
+        "prev(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "next",
+      "params": [],
+      "syntax": [
+        "next(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleIndicatorClick",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleIndicatorClick(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleIndicatorHover",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleIndicatorHover(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElCarousel"
+}

@@ -1,0 +1,496 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "min",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "max",
+      "default": "100",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "step",
+      "default": "1",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "number",
+        "array"
+      ],
+      "name": "v-model",
+      "default": "0",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-input",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-input-controls",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "input-size",
+      "default": "\"small\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-stops",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-tooltip",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "format-tooltip",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disabled",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "range",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "vertical",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "height",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "debounce",
+      "default": "300",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "label",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "tooltip-class",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "marks",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "firstValue",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "secondValue",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "oldValue",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "dragging",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "sliderSize",
+      "initialValue": "1"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "stops",
+      "dependencies": [
+        "showStops",
+        "min",
+        "max",
+        "step",
+        "range",
+        "minValue",
+        "maxValue",
+        "firstValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "markList",
+      "dependencies": [
+        "marks",
+        "max",
+        "min"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "minValue",
+      "dependencies": [
+        "firstValue",
+        "secondValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "maxValue",
+      "dependencies": [
+        "firstValue",
+        "secondValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "barSize",
+      "dependencies": [
+        "range",
+        "maxValue",
+        "minValue",
+        "max",
+        "min",
+        "firstValue"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "barStart",
+      "dependencies": [
+        "range",
+        "minValue",
+        "min",
+        "max"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "precision",
+      "dependencies": [
+        "min",
+        "max",
+        "step"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "runwayStyle",
+      "dependencies": [
+        "vertical",
+        "height"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "barStyle",
+      "dependencies": [
+        "vertical",
+        "barSize",
+        "barStart"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "sliderDisabled",
+      "dependencies": [
+        "disabled",
+        "elForm"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "[this.minValue,this.maxValue]",
+          "type": "array",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "this.range ? [this.minValue, this.maxValue] : this.value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "valueChanged",
+      "params": [],
+      "syntax": [
+        "valueChanged(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setValues",
+      "params": [],
+      "syntax": [
+        "setValues(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setPosition",
+      "params": [
+        {
+          "name": "percent",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setPosition(percent: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onSliderClick",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onSliderClick(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetSize",
+      "params": [],
+      "syntax": [
+        "resetSize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitChange",
+      "params": [],
+      "syntax": [
+        "emitChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getStopStyle",
+      "params": [
+        {
+          "name": "position",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getStopStyle(position: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    }
+  ],
+  "name": "ElSlider"
+}

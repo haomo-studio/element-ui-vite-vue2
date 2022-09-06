@@ -1,0 +1,280 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "v-model",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-alpha",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "color-format",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disabled",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "popper-class",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "predefine",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "Color",
+      "name": "color",
+      "initialValue": "new Color({\n        enableAlpha: this.showAlpha,\n        format: this.colorFormat\n      })"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "showPicker",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "showPanelColor",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "displayedColor",
+      "dependencies": [
+        "value",
+        "showPanelColor",
+        "displayedRgb",
+        "color",
+        "showAlpha"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "_elFormItemSize",
+      "dependencies": [
+        "elFormItem"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "colorSize",
+      "dependencies": [
+        "size",
+        "_elFormItemSize",
+        "$ELEMENT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "colorDisabled",
+      "dependencies": [
+        "disabled",
+        "elForm"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "active-change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleTrigger",
+      "params": [],
+      "syntax": [
+        "handleTrigger(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "confirmValue",
+      "params": [],
+      "syntax": [
+        "confirmValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearValue",
+      "params": [],
+      "syntax": [
+        "clearValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "hide",
+      "params": [],
+      "syntax": [
+        "hide(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetColor",
+      "params": [],
+      "syntax": [
+        "resetColor(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "displayedRgb",
+      "params": [
+        {
+          "name": "color",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "showAlpha",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "displayedRgb(color: unknown, showAlpha: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    }
+  ],
+  "name": "ElColorPicker"
+}

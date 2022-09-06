@@ -1,0 +1,1242 @@
+{
+  "inheritAttrs": true,
+  "errors": [
+    "tag <input> has no matching end tag."
+  ],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prefix",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "empty",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "name",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "id",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "v-model",
+      "required": true,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "autocomplete",
+      "default": "\"off\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [
+        {
+          "name": "Deprecated",
+          "description": "in next major version"
+        }
+      ],
+      "visibility": "public",
+      "type": "string",
+      "name": "auto-complete",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "automatic-dropdown",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disabled",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "clearable",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "filterable",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "allow-create",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "loading",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "popper-class",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "remote",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "loading-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "no-match-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "no-data-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "remote-method",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "filter-method",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "multiple",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "multiple-limit",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "placeholder",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "default-first-option",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "reserve-keyword",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "value-key",
+      "default": "\"value\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "collapse-tags",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "popper-append-to-body",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "options",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "cachedOptions",
+      "initialValue": "[]"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "createdLabel",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "createdSelected",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "selected",
+      "initialValue": "this.multiple ? [] : {}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "inputLength",
+      "initialValue": "20"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "inputWidth",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "initialInputHeight",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "cachedPlaceHolder",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "optionsCount",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "filteredOptionsCount",
+      "initialValue": "0"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "visible",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "softFocus",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "selectedLabel",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "hoverIndex",
+      "initialValue": "-1"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "query",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "previousQuery",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "inputHovering",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "currentPlaceholder",
+      "initialValue": "\"\""
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "menuVisibleOnFocus",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isOnComposition",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isSilentBlur",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "_elFormItemSize",
+      "dependencies": [
+        "elFormItem"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "readonly",
+      "dependencies": [
+        "filterable",
+        "multiple",
+        "visible"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "showClose",
+      "dependencies": [
+        "multiple",
+        "value",
+        "clearable",
+        "selectDisabled",
+        "inputHovering"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "iconClass",
+      "dependencies": [
+        "remote",
+        "filterable",
+        "visible"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "debounce",
+      "dependencies": [
+        "remote"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "emptyText",
+      "dependencies": [
+        "loading",
+        "loadingText",
+        "t",
+        "remote",
+        "query",
+        "options",
+        "filterable",
+        "filteredOptionsCount",
+        "noMatchText",
+        "noDataText"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "showNewOption",
+      "dependencies": [
+        "options",
+        "query",
+        "filterable",
+        "allowCreate"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "selectSize",
+      "dependencies": [
+        "size",
+        "_elFormItemSize",
+        "$ELEMENT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "selectDisabled",
+      "dependencies": [
+        "disabled",
+        "elForm"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "collapseTagSize",
+      "dependencies": [
+        "selectSize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "propPlaceholder",
+      "dependencies": [
+        "placeholder",
+        "t"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "visible-change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "arguments": []
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "remove-tag",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleNavigate",
+      "params": [
+        {
+          "name": "direction",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleNavigate(direction: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleComposition",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleComposition(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleQueryChange",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleQueryChange(val: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "scrollToOption",
+      "params": [
+        {
+          "name": "option",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "scrollToOption(option: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleMenuEnter",
+      "params": [],
+      "syntax": [
+        "handleMenuEnter(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "emitChange",
+      "params": [
+        {
+          "name": "val",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "emitChange(val: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getOption",
+      "params": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getOption(value: unknown): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setSelected",
+      "params": [],
+      "syntax": [
+        "setSelected(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleFocus",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleFocus(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "params": [],
+      "syntax": [
+        "blur(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleBlur(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleClearClick",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleClearClick(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "doDestroy",
+      "params": [],
+      "syntax": [
+        "doDestroy(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleClose",
+      "params": [],
+      "syntax": [
+        "handleClose(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleLastOptionHitState",
+      "params": [
+        {
+          "name": "hit",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "toggleLastOptionHitState(hit: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "deletePrevTag",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "deletePrevTag(e: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "managePlaceholder",
+      "params": [],
+      "syntax": [
+        "managePlaceholder(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetInputState",
+      "params": [
+        {
+          "name": "e",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "resetInputState(e: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetInputHeight",
+      "params": [],
+      "syntax": [
+        "resetInputHeight(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetHoverIndex",
+      "params": [],
+      "syntax": [
+        "resetHoverIndex(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleOptionSelect",
+      "params": [
+        {
+          "name": "option",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "byClick",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleOptionSelect(option: unknown, byClick: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setSoftFocus",
+      "params": [],
+      "syntax": [
+        "setSoftFocus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getValueIndex",
+      "params": [
+        {
+          "name": "arr",
+          "type": "array",
+          "defaultValue": "[]",
+          "rest": false
+        },
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getValueIndex(arr: array = [], value: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleMenu",
+      "params": [],
+      "syntax": [
+        "toggleMenu(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "selectOption",
+      "params": [],
+      "syntax": [
+        "selectOption(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "deleteSelected",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "deleteSelected(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "deleteTag",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "tag",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "deleteTag(event: unknown, tag: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onInputChange",
+      "params": [],
+      "syntax": [
+        "onInputChange(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onOptionDestroy",
+      "params": [
+        {
+          "name": "index",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onOptionDestroy(index: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resetInputWidth",
+      "params": [],
+      "syntax": [
+        "resetInputWidth(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleResize",
+      "params": [],
+      "syntax": [
+        "handleResize(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "checkDefaultFirstOption",
+      "params": [],
+      "syntax": [
+        "checkDefaultFirstOption(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getValueKey",
+      "params": [
+        {
+          "name": "item",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "getValueKey(item: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElSelect"
+}

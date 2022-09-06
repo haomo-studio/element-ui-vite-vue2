@@ -1,0 +1,822 @@
+{
+  "inheritAttrs": false,
+  "errors": [
+    "tag <input> has no matching end tag."
+  ],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prepend",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "prefix",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "suffix",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "append",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "number"
+      ],
+      "name": "v-model",
+      "required": false,
+      "describeModel": true
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "resize",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "form",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "disabled",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "readonly",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "default": "\"text\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "boolean",
+        "object"
+      ],
+      "name": "autosize",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "autocomplete",
+      "default": "\"off\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [
+        {
+          "name": "Deprecated",
+          "description": "in next major version"
+        }
+      ],
+      "visibility": "public",
+      "type": "string",
+      "name": "auto-complete",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "validate-event",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "suffix-icon",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "prefix-icon",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "label",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "clearable",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-password",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-word-limit",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "tabindex",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "textareaCalcStyle",
+      "initialValue": "{}"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "hovering",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "focused",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isComposing",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "passwordVisible",
+      "initialValue": "false"
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "_elFormItemSize",
+      "dependencies": [
+        "elFormItem"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "validateState",
+      "dependencies": [
+        "elFormItem"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "needStatusIcon",
+      "dependencies": [
+        "elForm"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "validateIcon",
+      "dependencies": [
+        "validateState"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "textareaStyle",
+      "dependencies": [
+        "textareaCalcStyle",
+        "resize"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "inputSize",
+      "dependencies": [
+        "size",
+        "_elFormItemSize",
+        "$ELEMENT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "inputDisabled",
+      "dependencies": [
+        "disabled",
+        "elForm"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "nativeInputValue",
+      "dependencies": [
+        "value"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "showClear",
+      "dependencies": [
+        "clearable",
+        "inputDisabled",
+        "readonly",
+        "nativeInputValue",
+        "focused",
+        "hovering"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "showPwdVisible",
+      "dependencies": [
+        "showPassword",
+        "inputDisabled",
+        "readonly",
+        "nativeInputValue",
+        "focused"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isWordLimitVisible",
+      "dependencies": [
+        "showWordLimit",
+        "$attrs",
+        "type",
+        "inputDisabled",
+        "readonly",
+        "showPassword"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "upperLimit",
+      "dependencies": [
+        "$attrs"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "textLength",
+      "dependencies": [
+        "value"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "inputExceed",
+      "dependencies": [
+        "isWordLimitVisible",
+        "textLength",
+        "upperLimit"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "compositionstart",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "compositionupdate",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "compositionend",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "input",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "change",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "unknown",
+          "rest": false
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "arguments": []
+    }
+  ],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "focus",
+      "params": [],
+      "syntax": [
+        "focus(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "blur",
+      "params": [],
+      "syntax": [
+        "blur(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMigratingConfig",
+      "params": [],
+      "syntax": [
+        "getMigratingConfig(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleBlur",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleBlur(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "select",
+      "params": [],
+      "syntax": [
+        "select(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resizeTextarea",
+      "params": [],
+      "syntax": [
+        "resizeTextarea(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setNativeInputValue",
+      "params": [],
+      "syntax": [
+        "setNativeInputValue(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleFocus",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleFocus(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleCompositionStart",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleCompositionStart(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleCompositionUpdate",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleCompositionUpdate(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleCompositionEnd",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleCompositionEnd(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleInput",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleInput(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleChange",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleChange(event: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "calcIconOffset",
+      "params": [
+        {
+          "name": "place",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "calcIconOffset(place: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateIconOffset",
+      "params": [],
+      "syntax": [
+        "updateIconOffset(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clear",
+      "params": [],
+      "syntax": [
+        "clear(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handlePasswordVisible",
+      "params": [],
+      "syntax": [
+        "handlePasswordVisible(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getInput",
+      "params": [],
+      "syntax": [
+        "getInput(): boolean"
+      ],
+      "returns": {
+        "type": "boolean"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getSuffixVisible",
+      "params": [],
+      "syntax": [
+        "getSuffixVisible(): boolean"
+      ],
+      "returns": {
+        "type": "boolean"
+      }
+    }
+  ],
+  "name": "ElInput"
+}

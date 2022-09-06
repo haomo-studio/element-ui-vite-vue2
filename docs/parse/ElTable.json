@@ -1,0 +1,891 @@
+{
+  "inheritAttrs": true,
+  "errors": [],
+  "warnings": [],
+  "keywords": [],
+  "slots": [
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "default",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "empty",
+      "props": []
+    },
+    {
+      "kind": "slot",
+      "keywords": [],
+      "visibility": "public",
+      "name": "append",
+      "props": []
+    }
+  ],
+  "props": [
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "data",
+      "default": "[]",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "size",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "number"
+      ],
+      "name": "width",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "number"
+      ],
+      "name": "height",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "number"
+      ],
+      "name": "max-height",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "fit",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "stripe",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "border",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "function"
+      ],
+      "name": "row-key",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "context",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-header",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-summary",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "sum-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "summary-method",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "function"
+      ],
+      "name": "row-class-name",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "object",
+        "function"
+      ],
+      "name": "row-style",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "function"
+      ],
+      "name": "cell-class-name",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "object",
+        "function"
+      ],
+      "name": "cell-style",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "function"
+      ],
+      "name": "header-row-class-name",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "object",
+        "function"
+      ],
+      "name": "header-row-style",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "function"
+      ],
+      "name": "header-cell-class-name",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "object",
+        "function"
+      ],
+      "name": "header-cell-style",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "highlight-current-row",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "number"
+      ],
+      "name": "current-row-key",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "empty-text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "array",
+      "name": "expand-row-keys",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "default-expand-all",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "default-sort",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "tooltip-effect",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "span-method",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "select-on-indeterminate",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "indent",
+      "default": "16",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "tree-props",
+      "default": "{\"hasChildren\":\"hasChildren\",\"children\":\"children\"}",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "lazy",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "load",
+      "required": false,
+      "describeModel": false
+    }
+  ],
+  "data": [
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "TableLayout",
+      "name": "layout",
+      "initialValue": "new TableLayout({\n        store: this.store,\n        table: this,\n        fit: this.fit,\n        showHeader: this.showHeader\n      })"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isHidden",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "renderExpanded",
+      "initialValue": "null"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "resizeProxyVisible",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "resizeState",
+      "initialValue": "{\"width\":null,\"height\":null}"
+    },
+    {
+      "kind": "data",
+      "description": "是否拥有多级表头",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "isGroup",
+      "initialValue": "false"
+    },
+    {
+      "kind": "data",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "scrollPosition",
+      "initialValue": "\"left\""
+    }
+  ],
+  "computed": [
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "tableSize",
+      "dependencies": [
+        "size",
+        "$ELEMENT"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "bodyWrapper",
+      "dependencies": [
+        "$refs"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "shouldUpdateHeight",
+      "dependencies": [
+        "height",
+        "maxHeight",
+        "fixedColumns",
+        "rightFixedColumns"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "bodyWidth",
+      "dependencies": [
+        "layout",
+        "bodyWidth",
+        "scrollY",
+        "gutterWidth"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "bodyHeight",
+      "dependencies": [
+        "layout",
+        "height",
+        "maxHeight",
+        "showHeader",
+        "headerHeight",
+        "bodyHeight",
+        "footerHeight"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "fixedBodyHeight",
+      "dependencies": [
+        "height",
+        "layout",
+        "maxHeight",
+        "showHeader"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "unknown",
+      "name": "fixedHeight",
+      "dependencies": [
+        "maxHeight",
+        "showSummary",
+        "layout",
+        "data"
+      ]
+    },
+    {
+      "kind": "computed",
+      "keywords": [],
+      "visibility": "public",
+      "type": "object",
+      "name": "emptyBlockStyle",
+      "dependencies": [
+        "data",
+        "layout",
+        "bodyWidth"
+      ]
+    }
+  ],
+  "events": [],
+  "methods": [
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "getMigratingConfig",
+      "params": [],
+      "syntax": [
+        "getMigratingConfig(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "setCurrentRow",
+      "params": [
+        {
+          "name": "row",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "setCurrentRow(row: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleRowSelection",
+      "params": [
+        {
+          "name": "row",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "selected",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "toggleRowSelection(row: unknown, selected: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleRowExpansion",
+      "params": [
+        {
+          "name": "row",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "expanded",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "toggleRowExpansion(row: unknown, expanded: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearSelection",
+      "params": [],
+      "syntax": [
+        "clearSelection(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearFilter",
+      "params": [
+        {
+          "name": "columnKeys",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "clearFilter(columnKeys: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "clearSort",
+      "params": [],
+      "syntax": [
+        "clearSort(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleMouseLeave",
+      "params": [],
+      "syntax": [
+        "handleMouseLeave(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "updateScrollY",
+      "params": [],
+      "syntax": [
+        "updateScrollY(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleFixedMousewheel",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleFixedMousewheel(event: unknown, data: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "handleHeaderFooterMousewheel",
+      "params": [
+        {
+          "name": "event",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "data",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "handleHeaderFooterMousewheel(event: unknown, data: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "description": "TODO 使用 CSS transform",
+      "keywords": [],
+      "visibility": "public",
+      "name": "syncPostion",
+      "params": [],
+      "syntax": [
+        "syncPostion(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "throttleSyncPostion",
+      "params": [],
+      "syntax": [
+        "throttleSyncPostion(): unknown"
+      ],
+      "returns": {
+        "type": "unknown"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "onScroll",
+      "params": [
+        {
+          "name": "evt",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "onScroll(evt: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "bindEvents",
+      "params": [],
+      "syntax": [
+        "bindEvents(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "unbindEvents",
+      "params": [],
+      "syntax": [
+        "unbindEvents(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "resizeListener",
+      "params": [],
+      "syntax": [
+        "resizeListener(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "doLayout",
+      "params": [],
+      "syntax": [
+        "doLayout(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "sort",
+      "params": [
+        {
+          "name": "prop",
+          "type": "unknown",
+          "rest": false
+        },
+        {
+          "name": "order",
+          "type": "unknown",
+          "rest": false
+        }
+      ],
+      "syntax": [
+        "sort(prop: unknown, order: unknown): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "kind": "method",
+      "keywords": [],
+      "visibility": "public",
+      "name": "toggleAllSelection",
+      "params": [],
+      "syntax": [
+        "toggleAllSelection(): void"
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ],
+  "name": "ElTable"
+}
