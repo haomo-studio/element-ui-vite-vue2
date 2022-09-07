@@ -7,6 +7,7 @@ import path from 'path'
 import { resolve } from "path"
 const os = require("os");
 
+
 /**
  * 判断代码是否在服务器上的容器里运行
  */
@@ -68,7 +69,7 @@ export default defineConfig({
         target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/project-api/, ""),
-      },
+    },
     },
   },
   plugins: [

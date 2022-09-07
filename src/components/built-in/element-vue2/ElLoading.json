@@ -4,7 +4,94 @@
   "warnings": [],
   "keywords": [],
   "slots": [],
-  "props": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "覆盖DOM节点",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "object"
+      ],
+      "name": "target",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "遮罩插入子节点",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "body",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "全屏遮罩",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "fullscreen",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "锁定屏幕滚动",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "lock",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "加载文案",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "text",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "定义图标类名",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "spinner",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "遮罩背景色",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "background",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义类名",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "customClass",
+      "required": false,
+      "describeModel": false
+    }
+  ],
   "data": [
     {
       "kind": "data",

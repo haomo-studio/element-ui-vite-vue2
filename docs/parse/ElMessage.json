@@ -12,7 +12,107 @@
       "props": []
     }
   ],
-  "props": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "消息文字",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "VNode"
+      ],
+      "name": "message",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主题",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "default": "\"info\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "定义图标类名",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "icon-class",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义类名",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "custom-class",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示时间",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "duration",
+      "default": "3000",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示关闭按钮",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-close",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "文字是否居中",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "center",
+      "default": "false",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭的回调函数",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "on-close",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "提示上边距",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "offset",
+      "default": "20",
+      "required": false,
+      "describeModel": false
+    }
+  ],
   "data": [
     {
       "kind": "data",
