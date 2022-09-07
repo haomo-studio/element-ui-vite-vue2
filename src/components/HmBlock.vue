@@ -8,31 +8,15 @@
     :class="{ active: active, select: select }"
   >
     <slot></slot>
-    <div class="view-drag" v-if="select">
-      <DragOutlined />
-    </div>
-    <div class="view-action" v-if="select">
-      <CopyOutlined />
-      <DeleteOutlined @click="deleteComponent" />
-    </div>
   </div>
 </template>
 
 <script>
-import {
-  CopyOutlined,
-  DeleteOutlined,
-  DragOutlined,
-} from "@ant-design/icons-vue";
-
 import _ from 'lodash';
 
 export default {
   name: "HmBlock",
   components: {
-    CopyOutlined,
-    DeleteOutlined,
-    DragOutlined,
   },
   props: {
     style: {

@@ -12,7 +12,6 @@
     "parse-all": "bash scripts/parse.sh"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^6.1.0",
     "@formily/core": "^2.2.2",
     "@formily/element": "^2.2.2",
     "@formily/vue": "^2.2.2",
