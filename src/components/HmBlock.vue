@@ -19,7 +19,7 @@ export default {
   components: {
   },
   props: {
-    style: {
+    styles: {
       type: String,
       default: "background-color: white;",
     },
@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     blockStyle() {
-      return this.convertCssToVueStyle(this.widthStyle + this.style);
+      return this.convertCssToVueStyle(this.widthStyle + this.styles);
     },
   },
   mounted() {
