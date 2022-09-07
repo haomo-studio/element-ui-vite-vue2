@@ -3,6 +3,7 @@ import App from './App.vue'
 import { createPinia, PiniaVuePlugin } from 'pinia'
 import router from './router'
 import VueCookie from 'vue-cookie'
+import './index.css'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
