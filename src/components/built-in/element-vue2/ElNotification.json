@@ -12,7 +12,125 @@
       "props": []
     }
   ],
-  "props": [],
+  "props": [
+    {
+      "kind": "prop",
+      "description": "标题",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "title",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "说明文字",
+      "keywords": [],
+      "visibility": "public",
+      "type": [
+        "string",
+        "VNode"
+      ],
+      "name": "message",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "主题样式",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "type",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "定义图标类名",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "icon-class",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "自定义类名",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "custom-class",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示时间",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "duration",
+      "default": "4500",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "定义弹出位置",
+      "keywords": [],
+      "visibility": "public",
+      "type": "string",
+      "name": "position",
+      "default": "\"top-right\"",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "显示关闭按钮",
+      "keywords": [],
+      "visibility": "public",
+      "type": "boolean",
+      "name": "show-close",
+      "default": "true",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "关闭的回调函数",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "on-close",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "点击通知函数",
+      "keywords": [],
+      "visibility": "public",
+      "type": "function",
+      "name": "on-click",
+      "required": false,
+      "describeModel": false
+    },
+    {
+      "kind": "prop",
+      "description": "偏移的距离",
+      "keywords": [],
+      "visibility": "public",
+      "type": "number",
+      "name": "offset",
+      "default": "0",
+      "required": false,
+      "describeModel": false
+    }
+  ],
   "data": [
     {
       "kind": "data",
