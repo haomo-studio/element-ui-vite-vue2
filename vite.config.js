@@ -69,7 +69,7 @@ export default defineConfig({
         target: 'http://jeecgboot-vue3.dev.haomo-tech.com:8000/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/project-api/, ""),
-    },
+      },
     },
   },
   plugins: [
