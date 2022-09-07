@@ -193,10 +193,7 @@ const serverHost = __SERVER_HOST__;
 const socketProtocol = __HMR_PROTOCOL__ || (location.protocol === 'https:' ? 'wss' : 'ws');
 const hmrPort = __HMR_PORT__;
 // const socketHost = `${__HMR_HOSTNAME__ || importMetaUrl.hostname}:${hmrPort || importMetaUrl.port}${__HMR_BASE__}`;
-function getSocketHost() {
-  return `${__HMR_HOSTNAME__ || importMetaUrl.hostname}/wss/3000`;
-}
-const socketHost = getSocketHost();
+const socketHost = `${__HMR_HOSTNAME__ || importMetaUrl.hostname}/wss/3000`;
 const directSocketHost = __HMR_DIRECT_TARGET__;
 const base = __BASE__ || '/';
 const messageBuffer = [];
