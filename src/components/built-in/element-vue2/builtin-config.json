@@ -58,10 +58,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmElementDrawer",
+        "name": "ElDrawer",
         "title": "抽屉",
-        "importPath": "built-in/element-vue2/HmElementDrawer",
-        "imgUrl": "built-in/element-vue2/img/HmElementDrawer.png",
+        "importPath": "built-in/element-vue2/ElDrawer",
+        "imgUrl": "built-in/element-vue2/img/ElDrawer.png",
         "type": 0,
         "isBuiltIn": true
       },
