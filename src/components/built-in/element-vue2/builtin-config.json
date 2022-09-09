@@ -70,6 +70,14 @@
         "imgUrl": "built-in/element-vue2/img/HmElementementButton.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmElementRadio",
+        "title": "单选框",
+        "importPath": "built-in/element-vue2/HmElementRadio",
+        "imgUrl": "built-in/element-vue2/img/HmElementRadio.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },

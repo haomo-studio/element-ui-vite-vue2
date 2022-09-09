@@ -110,6 +110,12 @@ const testRoutes = [
     name: "TestHmElementementButton",
     component: () =>
       import("/@/pages/test/TestHmElementementButton.vue"),
+  },
+  {
+    path: "/TestHmElementRadio",
+    name: "TestHmElementRadio",
+    component: () =>
+      import("/@/pages/test/TestHmElementRadio.vue"),
   }
 ]
 export default testRoutes
