@@ -56,7 +56,42 @@
         "imgUrl": "built-in/element-vue2/layout/img/HmModal.png",
         "type": 0,
         "isBuiltIn": true
-      },
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "表单组件",
+    "componentList": [
+      
+    ]
+  },
+  {
+    "id": 4,
+    "name": "基础组件",
+    "componentList": []
+  },
+  {
+    "id": 5,
+    "name": "数据展示",
+    "componentList": [
+      
+    ]
+  },
+  {
+    "id": 6,
+    "name": "导航",
+    "componentList": []
+  },
+  {
+    "id": 7,
+    "name": "反馈组件",
+    "componentList": [ ]
+  },
+  {
+    "id": 8,
+    "name": "ElementUI原生组件",
+    "componentList": [ 
       {
         "name": "ElDrawer",
         "title": "抽屉",
@@ -109,13 +144,7 @@
         "imgUrl": "built-in/element-vue2/img/ElTabs.png",
         "type": 0,
         "isBuiltIn": true
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "表单组件",
-    "componentList": [
+      },
       {
         "name": "ElButton",
         "title": "按钮",
@@ -214,18 +243,7 @@
         "imgUrl": "built-in/element-vue2/img/ElTag.png",
         "type": 0,
         "isBuiltIn": true
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "基础组件",
-    "componentList": []
-  },
-  {
-    "id": 5,
-    "name": "数据展示",
-    "componentList": [
+      },
       {
         "name": "ElCalendar",
         "title": "日历",
@@ -270,23 +288,7 @@
         "imgUrl": "built-in/element-vue2/img/ElTree.png",
         "type": 0,
         "isBuiltIn": true
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "导航",
-    "componentList": []
-  },
-  {
-    "id": 7,
-    "name": "反馈组件",
-    "componentList": [ ]
-  },
-  {
-    "id": 8,
-    "name": "其他",
-    "componentList": [ 
+      },
       {
         "name": "ElAlert",
         "title": "警告",
@@ -539,6 +541,13 @@
         "type": 0,
         "isBuiltIn": true
       }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "其他",
+    "componentList": [ 
+      
     ]
   }
 ]

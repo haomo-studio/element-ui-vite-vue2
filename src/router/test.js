@@ -105,5 +105,11 @@ const testRoutes = [
     component: () =>
       import("/@/pages/test/HmEchartsGeoMap.vue"),
   },
+  {
+    path: "/TestHmElementementButton",
+    name: "TestHmElementementButton",
+    component: () =>
+      import("/@/pages/test/TestHmElementementButton.vue"),
+  }
 ]
 export default testRoutes
