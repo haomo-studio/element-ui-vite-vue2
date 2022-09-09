@@ -8,6 +8,7 @@ import './index.css'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 
+import loadComponent from './utils/loadComponent';
 import axios from 'axios';
 import moment from 'moment';
 import 'moment/dist/locale/zh-cn';
@@ -50,6 +51,7 @@ Vue.prototype.$array2tree = array2tree;
 Vue.use(VueCookie)
 Vue.use(ElementUI)
 Vue.use(PiniaVuePlugin)
+Vue.use(loadComponent);
 const pinia = createPinia()
 
 new Vue({
