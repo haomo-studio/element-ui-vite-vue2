@@ -4,7 +4,7 @@
     :native-type="submit"
     :type="success"
     :size="small"
-    :icon="el-icon-search"
+    icon="el-icon-search"
     :plain="true"
     :round="true"
     :circle="false"
