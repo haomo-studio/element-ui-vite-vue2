@@ -78,6 +78,14 @@
         "imgUrl": "built-in/element-vue2/img/HmElementRadio.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmElementCheckbox",
+        "title": "多选框",
+        "importPath": "built-in/element-vue2/HmElementCheckbox",
+        "imgUrl": "built-in/element-vue2/img/HmElementCheckbox.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },

@@ -116,6 +116,12 @@ const testRoutes = [
     name: "TestHmElementRadio",
     component: () =>
       import("/@/pages/test/TestHmElementRadio.vue"),
+  },
+  {
+    path: "/TestHmElementCheckbox",
+    name: "TestHmElementCheckbox",
+    component: () =>
+      import("/@/components/built-in/element-vue2/HmElementCheckbox.vue"),
   }
 ]
 export default testRoutes

@@ -1,36 +1,35 @@
 <template>
   <div>
-    <HmElementRadio
-      :raidoList="raidoList2"
+    <HmElementCheckbox
+      :checkboxList="checkboxList2"
       :border="true"
       size="small"
       :disabled="true"
       @onChange="onChange"
-    ></HmElementRadio>
+    ></HmElementCheckbox>
   </div>
 </template>
 
 <script>
-import HmElementRadio from "/@/components/built-in/element-vue2/HmElementRadio.vue";
+import HmElementCheckbox from "/@/components/built-in/element-vue2/HmElementCheckbox.vue";
 export default {
   components: {
-    HmElementRadio,
+    HmElementCheckbox,
   },
   data() {
     return {
-      raidoList2: [
+      checkboxList2: [
         {
-          label: 1,
           checked: true,
-          value: "A",
+          value: "raido1",
         },
         {
-          label: 2,
-          value: "B",
+          checked: true,
+          value: "raido2",
         },
         {
-          label: 3,
-          value: "C",
+          checked: true,
+          value: "raido3",
         },
       ],
     };
@@ -39,7 +38,7 @@ export default {
     onChange: function (e, num) {
       console.log("点击的监听值", e, num);
     },
-  }
+  },
 };
 </script>
 

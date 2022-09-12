@@ -1,45 +1,40 @@
 <template>
   <div>
-    <el-radio
-      v-for="(item, index) in cRaidoList"
+    <el-checkbox
+      v-for="(item, index) in cCheckboxList"
       :key="index"
       v-model="item.checked"
+      :disabled="disabled"
       :border="border"
       :size="size"
-      :disabled="disabled"
       :label="item.value"
       @change="onChange(item, index)"
       >{{ item.value }}
-    </el-radio>
+    </el-checkbox>
   </div>
 </template>
 
 <script>
-import { useEffectForm } from '@formily/core';
-
 export default {
-  name: "HmElementRadio",
+  name: "HmElementCheckbox",
   props: {
     /**
      * 数据
      * @model
      */
-    raidoList: {
+     checkboxList: {
       type: Array,
       default: function () {
         return [
           {
-            label: 1,
             checked: true,
             value: "raido",
           },
           {
-            label: 2,
             checked: false,
             value: "raido",
           },
           {
-            label: 3,
             checked: false,
             value: "raido",
           },
@@ -67,35 +62,34 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
-    },
+    }
   },
   data() {
     return {
-      cValue: "",
-      cRaidoList: [
+      cCheckboxList: [
         {
-          label: 1,
+          checked: true,
           value: "raido1",
         },
         {
-          label: 2,
+          checked: false,
           value: "raido2",
         },
         {
-          label: 3,
+          checked: false,
           value: "raido3",
         },
       ],
     };
   },
   watch: {
-    raidoList(value) {
+    checkboxList(value) {
       console.log("监听的值", value);
-      this.cRaidoList = value;
+      this.cCheckboxList = value;
     },
   },
   mounted() {
-    this.cRaidoList = this.raidoList;
+    this.cCheckboxList = this.checkboxList;
   },
   methods: {
     onChange: function (e, num) {
