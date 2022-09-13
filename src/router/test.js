@@ -105,5 +105,29 @@ const testRoutes = [
     component: () =>
       import("/@/pages/test/HmEchartsGeoMap.vue"),
   },
+  {
+    path: "/TestHmElementementButton",
+    name: "TestHmElementementButton",
+    component: () =>
+      import("/@/pages/test/TestHmElementementButton.vue"),
+  },
+  {
+    path: "/TestHmElementRadio",
+    name: "TestHmElementRadio",
+    component: () =>
+      import("/@/pages/test/TestHmElementRadio.vue"),
+  },
+  {
+    path: "/TestHmElementCheckbox",
+    name: "TestHmElementCheckbox",
+    component: () =>
+      import("/@/pages/test/TestHmElementCheckbox.vue"),
+  },
+  {
+    path: "/TestHmElementInput",
+    name: "TestHmElementInput",
+    component: () =>
+      import("/@/pages/test/TestHmElementInput.vue"),
+  }
 ]
 export default testRoutes

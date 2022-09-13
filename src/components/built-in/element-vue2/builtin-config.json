@@ -56,59 +56,6 @@
         "imgUrl": "built-in/element-vue2/layout/img/HmModal.png",
         "type": 0,
         "isBuiltIn": true
-      },
-      {
-        "name": "ElDrawer",
-        "title": "抽屉",
-        "importPath": "built-in/element-vue2/ElDrawer",
-        "imgUrl": "built-in/element-vue2/img/ElDrawer.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElCollapse",
-        "title": "折叠面板",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElCollapse.json",
-        "imgUrl": "built-in/element-vue2/img/ElCollapse.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElContainer",
-        "title": "布局容器",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElContainer.json",
-        "imgUrl": "built-in/element-vue2/img/ElContainer.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElDialog",
-        "title": "对话框",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElDialog.json",
-        "imgUrl": "built-in/element-vue2/img/ElDialog.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElDrawer",
-        "title": "抽屉",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElDrawer.json",
-        "imgUrl": "built-in/element-vue2/img/ElDrawer.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElTabs",
-        "title": "标签页",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElTabs.json",
-        "imgUrl": "built-in/element-vue2/img/ElTabs.png",
-        "type": 0,
-        "isBuiltIn": true
       }
     ]
   },
@@ -117,101 +64,34 @@
     "name": "表单组件",
     "componentList": [
       {
-        "name": "ElButton",
+        "name": "HmElementementButton",
         "title": "按钮",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElButton.json",
-        "imgUrl": "built-in/element-vue2/img/ElButton.png",
+        "importPath": "built-in/element-vue2/HmElementementButton",
+        "imgUrl": "built-in/element-vue2/img/HmElementementButton.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
-        "name": "ElCheckbox",
-        "title": "多选框",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElCheckbox.json",
-        "imgUrl": "built-in/element-vue2/img/ElCheckbox.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElCascader",
-        "title": "级联选择器",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElCascader.json",
-        "imgUrl": "built-in/element-vue2/img/ElCascader.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElDatePicker",
-        "title": "日期选择框",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElDatePicker.json",
-        "imgUrl": "built-in/element-vue2/img/ElDatePicker.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElInput",
-        "title": "输入框",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElInput.json",
-        "imgUrl": "built-in/element-vue2/img/ElInput.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElInputNumber",
-        "title": "计数器",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElInputNumber.json",
-        "imgUrl": "built-in/element-vue2/img/ElInputNumber.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElRadio",
+        "name": "HmElementRadio",
         "title": "单选框",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElRadio.json",
-        "imgUrl": "built-in/element-vue2/img/ElRadio.png",
+        "importPath": "built-in/element-vue2/HmElementRadio",
+        "imgUrl": "built-in/element-vue2/img/HmElementRadio.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
-        "name": "ElRate",
-        "title": "评分",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElRate.json",
-        "imgUrl": "built-in/element-vue2/img/ElRate.png",
+        "name": "HmElementCheckbox",
+        "title": "多选框",
+        "importPath": "built-in/element-vue2/HmElementCheckbox",
+        "imgUrl": "built-in/element-vue2/img/HmElementCheckbox.png",
         "type": 0,
         "isBuiltIn": true
       },
       {
-        "name": "ElSelect",
-        "title": "选择器",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElSelect.json",
-        "imgUrl": "built-in/element-vue2/img/ElSelect.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElSwitch",
-        "title": "开关",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElSwitch.json",
-        "imgUrl": "built-in/element-vue2/img/ElSwitch.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElTag",
-        "title": "标签",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElTag.json",
-        "imgUrl": "built-in/element-vue2/img/ElTag.png",
+        "name": "HmElementInput",
+        "title": "输入框",
+        "importPath": "built-in/element-vue2/HmElementInput",
+        "imgUrl": "built-in/element-vue2/img/HmElementInput.png",
         "type": 0,
         "isBuiltIn": true
       }
@@ -226,51 +106,7 @@
     "id": 5,
     "name": "数据展示",
     "componentList": [
-      {
-        "name": "ElCalendar",
-        "title": "日历",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElCalendar.json",
-        "imgUrl": "built-in/element-vue2/img/ElCalendar.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElCarousel",
-        "title": "走马灯",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElCarousel.json",
-        "imgUrl": "built-in/element-vue2/img/ElCarousel.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElImage",
-        "title": "图片",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElImage.json",
-        "imgUrl": "built-in/element-vue2/img/ElImage.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElTable",
-        "title": "表格",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElTable.json",
-        "imgUrl": "built-in/element-vue2/img/ElTable.png",
-        "type": 0,
-        "isBuiltIn": true
-      },
-      {
-        "name": "ElTree",
-        "title": "树形控件",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElTree.json",
-        "imgUrl": "built-in/element-vue2/img/ElTree.png",
-        "type": 0,
-        "isBuiltIn": true
-      }
+      
     ]
   },
   {
@@ -285,14 +121,212 @@
   },
   {
     "id": 8,
-    "name": "其他",
+    "name": "ElementUI原生组件",
     "componentList": [ 
+      {
+        "name": "ElDrawer",
+        "title": "抽屉",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElDrawer.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElDrawer.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElCollapse",
+        "title": "折叠面板",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElCollapse.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElCollapse.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElContainer",
+        "title": "布局容器",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElContainer.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElContainer.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElDialog",
+        "title": "对话框",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElDialog.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElDialog.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElDrawer",
+        "title": "抽屉",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElDrawer.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElDrawer.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElTabs",
+        "title": "标签页",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElTabs.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElTabs.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElButton",
+        "title": "按钮",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElButton.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElButton.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElCheckbox",
+        "title": "多选框",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElCheckbox.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElCheckbox.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElCascader",
+        "title": "级联选择器",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElCascader.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElCascader.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElDatePicker",
+        "title": "日期选择框",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElDatePicker.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElDatePicker.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElInput",
+        "title": "输入框",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElInput.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElInput.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElInputNumber",
+        "title": "计数器",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElInputNumber.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElInputNumber.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElRadio",
+        "title": "单选框",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElRadio.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElRadio.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElRate",
+        "title": "评分",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElRate.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElRate.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElSelect",
+        "title": "选择器",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElSelect.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElSelect.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElSwitch",
+        "title": "开关",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElSwitch.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElSwitch.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElTag",
+        "title": "标签",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElTag.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElTag.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElCalendar",
+        "title": "日历",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElCalendar.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElCalendar.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElCarousel",
+        "title": "走马灯",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElCarousel.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElCarousel.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElImage",
+        "title": "图片",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElImage.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElImage.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElTable",
+        "title": "表格",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElTable.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElTable.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "ElTree",
+        "title": "树形控件",
+        "importPath": "element-ui",
+        "docPath": "built-in/element-vue2/Element-ui/ElTree.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElTree.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
       {
         "name": "ElAlert",
         "title": "警告",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElAlert.json",
-        "imgUrl": "built-in/element-vue2/img/ElAlert.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElAlert.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElAlert.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -300,8 +334,8 @@
         "name": "ElAvatar",
         "title": "头像",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElAvatar.json",
-        "imgUrl": "built-in/element-vue2/img/ElAvatar.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElAvatar.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElAvatar.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -309,8 +343,8 @@
         "name": "ElBacktop",
         "title": "回到顶部",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElBacktop.json",
-        "imgUrl": "built-in/element-vue2/img/ElBacktop.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElBacktop.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElBacktop.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -318,8 +352,8 @@
         "name": "ElBadge",
         "title": "标记",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElBadge.json",
-        "imgUrl": "built-in/element-vue2/img/ElBadge.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElBadge.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElBadge.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -327,8 +361,8 @@
         "name": "ElBreadcrumb",
         "title": "面包屑",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElBreadcrumb.json",
-        "imgUrl": "built-in/element-vue2/img/ElBreadcrumb.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElBreadcrumb.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElBreadcrumb.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -336,8 +370,8 @@
         "name": "ElCard",
         "title": "卡片",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElCard.json",
-        "imgUrl": "built-in/element-vue2/img/ElCard.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElCard.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElCard.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -345,8 +379,8 @@
         "name": "ElColorPicker",
         "title": "颜色选择器",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElColorPicker.json",
-        "imgUrl": "built-in/element-vue2/img/ElColorPicker.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElColorPicker.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElColorPicker.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -354,8 +388,8 @@
         "name": "ElDivider",
         "title": "分割线",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElDivider.json",
-        "imgUrl": "built-in/element-vue2/img/ElDivider.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElDivider.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElDivider.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -363,8 +397,8 @@
         "name": "ElDropdown",
         "title": "下拉菜单",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElDropdown.json",
-        "imgUrl": "built-in/element-vue2/img/ElDropdown.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElDropdown.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElDropdown.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -372,8 +406,8 @@
         "name": "ElEmpty",
         "title": "空状态",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElEmpty.json",
-        "imgUrl": "built-in/element-vue2/img/ElEmpty.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElEmpty.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElEmpty.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -381,8 +415,8 @@
         "name": "ElForm",
         "title": "表单",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElForm.json",
-        "imgUrl": "built-in/element-vue2/img/ElForm.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElForm.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElForm.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -390,8 +424,8 @@
         "name": "ElIcon",
         "title": "图标",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElIcon.json",
-        "imgUrl": "built-in/element-vue2/img/ElIcon.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElIcon.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElIcon.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -399,8 +433,8 @@
         "name": "ElLink",
         "title": "文字链接",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElLink.json",
-        "imgUrl": "built-in/element-vue2/img/ElLink.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElLink.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElLink.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -408,8 +442,8 @@
         "name": "ElLoading",
         "title": "加载",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElLoading.json",
-        "imgUrl": "built-in/element-vue2/img/ElLoading.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElLoading.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElLoading.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -417,8 +451,8 @@
         "name": "ElMenu",
         "title": "导航菜单",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElMenu.json",
-        "imgUrl": "built-in/element-vue2/img/ElMenu.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElMenu.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElMenu.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -426,8 +460,8 @@
         "name": "ElMessage",
         "title": "消息提示",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElMessage.json",
-        "imgUrl": "built-in/element-vue2/img/ElMessage.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElMessage.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElMessage.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -435,8 +469,8 @@
         "name": "ElMessageBox",
         "title": "弹框",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElMessageBox.json",
-        "imgUrl": "built-in/element-vue2/img/ElMessageBox.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElMessageBox.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElMessageBox.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -444,8 +478,8 @@
         "name": "ElNotification",
         "title": "通知",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElNotification.json",
-        "imgUrl": "built-in/element-vue2/img/ElNotification.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElNotification.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElNotification.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -453,8 +487,8 @@
         "name": "ElPageHeader",
         "title": "页头",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElPageHeader.json",
-        "imgUrl": "built-in/element-vue2/img/ElPageHeader.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElPageHeader.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElPageHeader.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -462,8 +496,8 @@
         "name": "ElPagination",
         "title": "分页",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElPagination.json",
-        "imgUrl": "built-in/element-vue2/img/ElPagination.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElPagination.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElPagination.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -471,8 +505,8 @@
         "name": "ElPopconfirm",
         "title": "气泡确认框",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElPopconfirm.json",
-        "imgUrl": "built-in/element-vue2/img/ElPopconfirm.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElPopconfirm.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElPopconfirm.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -480,8 +514,8 @@
         "name": "ElPopover",
         "title": "弹出框",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElPopover.json",
-        "imgUrl": "built-in/element-vue2/img/ElPopover.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElPopover.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElPopover.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -489,8 +523,8 @@
         "name": "ElProgress",
         "title": "进度条",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElProgress.json",
-        "imgUrl": "built-in/element-vue2/img/ElProgress.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElProgress.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElProgress.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -498,8 +532,8 @@
         "name": "ElResult",
         "title": "结果",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElResult.json",
-        "imgUrl": "built-in/element-vue2/img/ElResult.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElResult.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElResult.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -507,8 +541,8 @@
         "name": "ElSkeleton",
         "title": "骨架屏",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElSkeleton.json",
-        "imgUrl": "built-in/element-vue2/img/ElSkeleton.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElSkeleton.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElSkeleton.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -516,8 +550,8 @@
         "name": "ElSlider",
         "title": "滑块",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElSlider.json",
-        "imgUrl": "built-in/element-vue2/img/ElSlider.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElSlider.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElSlider.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -525,8 +559,8 @@
         "name": "ElSteps",
         "title": "步骤条",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElSteps.json",
-        "imgUrl": "built-in/element-vue2/img/ElSteps.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElSteps.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElSteps.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -534,11 +568,18 @@
         "name": "ElTransfer",
         "title": "穿梭框",
         "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/ElTransfer.json",
-        "imgUrl": "built-in/element-vue2/img/ElTransfer.png",
+        "docPath": "built-in/element-vue2/Element-ui/ElTransfer.json",
+        "imgUrl": "built-in/element-vue2/Element-ui/img/ElTransfer.png",
         "type": 0,
         "isBuiltIn": true
       }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "其他",
+    "componentList": [ 
+      
     ]
   }
 ]
