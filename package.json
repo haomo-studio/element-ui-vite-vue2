@@ -22,6 +22,7 @@
     "echarts-gl": "^2.0.9",
     "echarts-wordcloud": "^2.0.0",
     "element-ui": "^2.15.9",
+    "jiff": "^0.7.3",
     "jsonpath": "^1.1.1",
     "moment": "^2.29.4",
     "pinia": "^2.0.14",
