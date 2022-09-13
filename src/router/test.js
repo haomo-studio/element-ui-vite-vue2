@@ -121,7 +121,13 @@ const testRoutes = [
     path: "/TestHmElementCheckbox",
     name: "TestHmElementCheckbox",
     component: () =>
-      import("/@/components/built-in/element-vue2/HmElementCheckbox.vue"),
+      import("/@/pages/test/TestHmElementCheckbox.vue"),
+  },
+  {
+    path: "/TestHmElementInput",
+    name: "TestHmElementInput",
+    component: () =>
+      import("/@/pages/test/TestHmElementInput.vue"),
   }
 ]
 export default testRoutes

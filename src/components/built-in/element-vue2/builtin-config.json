@@ -86,6 +86,14 @@
         "imgUrl": "built-in/element-vue2/img/HmElementCheckbox.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmElementInput",
+        "title": "输入框",
+        "importPath": "built-in/element-vue2/HmElementInput",
+        "imgUrl": "built-in/element-vue2/img/HmElementInput.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
