@@ -106,10 +106,10 @@ const testRoutes = [
       import("/@/pages/test/HmEchartsGeoMap.vue"),
   },
   {
-    path: "/TestHmElementementButton",
-    name: "TestHmElementementButton",
+    path: "/TestHmElementButton",
+    name: "TestHmElementButton",
     component: () =>
-      import("/@/pages/test/TestHmElementementButton.vue"),
+      import("/@/pages/test/TestHmElementButton.vue"),
   },
   {
     path: "/TestHmElementRadio",
