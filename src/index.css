@@ -68,3 +68,7 @@ body > div {
 .ele-wrapper {
   display: inline-block;
 }
+
+.ele-wrapper:empty {
+  display: none;
+}
