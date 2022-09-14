@@ -72,10 +72,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmElementementButton",
+        "name": "HmElementButton",
         "title": "按钮",
-        "importPath": "built-in/element-vue2/HmElementementButton",
-        "imgUrl": "built-in/element-vue2/img/HmElementementButton.png",
+        "importPath": "built-in/element-vue2/HmElementButton",
+        "imgUrl": "built-in/element-vue2/img/HmElementButton.png",
         "type": 0,
         "isBuiltIn": true
       },
