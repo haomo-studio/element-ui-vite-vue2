@@ -593,13 +593,12 @@
   {
     "id": 9,
     "name": "其他",
-    "componentList": [ 
+    "componentList": [
       {
         "name": "HmElementText",
         "title": "文字",
-        "importPath": "element-ui",
-        "docPath": "built-in/element-vue2/Element-ui/HmElementText.json",
-        "imgUrl": "built-in/element-vue2/Element-ui/img/HmElementText.png",
+        "importPath": "built-in/element-vue2/HmElementText",
+        "imgUrl": "built-in/element-vue2/img/HmElementText.png",
         "type": 0,
         "isBuiltIn": true
       }
