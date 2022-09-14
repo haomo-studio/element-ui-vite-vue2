@@ -10,8 +10,9 @@
     :loading="loading"
     :disabled="disabled"
     :autofocus="autofocus"
+    @click="onClick"
   >
-  {{text}}
+    {{ text }}
   </el-button>
 </template>
 
@@ -31,7 +32,7 @@ export default {
      * @type Enum
      * @options ["", "button", "submit", "reset"]
      */
-     nativeType: {
+    nativeType: {
       type: String,
     },
     /**
@@ -55,34 +56,34 @@ export default {
      * 图标
      * @type Icon
      */
-     icon: {
+    icon: {
       type: String,
     },
     /**
      * 是否朴素按钮
      */
-     plain: {
+    plain: {
       type: Boolean,
       default: false,
     },
     /**
      * 是否圆角按钮
      */
-     round: {
+    round: {
       type: Boolean,
       default: false,
     },
     /**
      * 是否圆形按钮
      */
-     circle: {
+    circle: {
       type: Boolean,
       default: false,
     },
     /**
      * 是否加载中状态
      */
-     loading: {
+    loading: {
       type: Boolean,
       default: false,
     },
@@ -96,7 +97,7 @@ export default {
     /**
      * 是否默认聚焦
      */
-     autofocus: {
+    autofocus: {
       type: Boolean,
       default: false,
     },
@@ -105,8 +106,10 @@ export default {
     return {};
   },
   methods: {
+    onClick: function (e) {
+      this.$emit("click", e);
+    },
   },
 };
 </script>
-<style scoped>
-</style>
+<style scoped></style>
