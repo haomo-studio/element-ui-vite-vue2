@@ -1,7 +1,7 @@
 <template>
 	<div class="hm-modal">
 		<el-dialog
-			visible="cVisible"
+			:visible="cVisible"
 			:title="title"
 			:width="cWidth"
       :fullscreen="fullscreen"
