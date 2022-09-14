@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "HmElementementButton",
+  name: "HmElementButton",
   props: {
     /**
      * 按钮文字
