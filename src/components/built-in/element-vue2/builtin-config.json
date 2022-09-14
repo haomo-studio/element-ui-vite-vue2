@@ -64,6 +64,14 @@
     "name": "表单组件",
     "componentList": [
       {
+        "name": "HmElementFormily",
+        "title": "formily表单",
+        "importPath": "built-in/element-vue2/HmElementFormily",
+        "imgUrl": "built-in/element-vue2/img/HmElementFormily.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
         "name": "HmElementementButton",
         "title": "按钮",
         "importPath": "built-in/element-vue2/HmElementementButton",
@@ -106,7 +114,14 @@
     "id": 5,
     "name": "数据展示",
     "componentList": [
-      
+      {
+        "name": "HmElementTable",
+        "title": "表格",
+        "importPath": "built-in/element-vue2/HmElementTable",
+        "imgUrl": "built-in/element-vue2/img/HmElementTable.png",
+        "type": 0,
+        "isBuiltIn": true
+      }
     ]
   },
   {
