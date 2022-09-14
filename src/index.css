@@ -64,3 +64,7 @@ body > div {
   flex-wrap: wrap;
   text-align: left;
 }
+
+.ele-wrapper {
+  display: inline-block;
+}
