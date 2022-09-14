@@ -1,23 +1,21 @@
 <template>
 	<div class="hm-modal">
 		<el-dialog
-			v-model="cVisible"
+			:visible="cVisible"
 			:title="title"
 			:width="cWidth"
+      :fullscreen="fullscreen"
+      :top="cTop"
+      :center="center"
+      :modal="modal"
+      :modal-append-to-body="modalAppendToBody"
+      :append-to-body="appendToBody"
+      :lock-scroll="lockScroll"
+      :close-on-click-modal="closeOnClickModal"
 			:cancel-text="cancelText"
 			:ok-text="okText"
 			:show-close="showClose"
-			:bodyStyle="{
-				height: cHeight,
-				padding: '24px',
-			}"
-			:ok-button-props="{
-				style: okButtonBoole ? '' : { display: 'none' },
-			}"
-			:cancel-button-props="{
-				style: cancelButtonProps ? '' : { display: 'none' },
-			}"
-			:footer="okButtonBoole || cancelButtonProps ? undefined : null"
+      :destroy-on-close="destroyOnClose"
 			@ok="handleOk"
 			@cancel="handleCancel"
 			@close="afterClose"
@@ -104,6 +102,13 @@ export default {
 			type: Boolean,
 			default: true,
 		},
+    /**
+     * 点击modal关闭
+     */
+    closeOnClickModal: {
+      type: Boolean,
+      default: true,
+    },
 		/**
 		 * 宽度
 		 */
@@ -118,20 +123,73 @@ export default {
 			type: String,
 			default: "320px",
 		},
+    /**
+     * 顶部边距
+     */
+    top: {
+      type: String,
+      default: '15vh'
+    },
+    /**
+     * 头部底部居中
+     */
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 显示遮罩层
+     */
+    modal: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 遮罩插入body
+     */
+    modalAppendToBody: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 遮罩插入body
+     */
+    appendToBody: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 禁止body滚动
+     */
+    lockScroll: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * 关闭销毁元素
+     */
+    destroyOnClose: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * 是否全屏
+     */
+    fullscreen: {
+      type: Boolean,
+      default: false,
+    },
 	},
 	data() {
 		return {
 			cWidth: "520px",
-			cHeight: "320px",
-			cVisible: false,
+      cTop: '15vh',
+			cVisible: true,
 		};
 	},
 	watch: {
 		width(value) {
-			this.cWidth = this.getCssUnit(value);
-		},
-		height(value) {
-			this.cHeight = this.getCssUnit(value);
+			this.cWidth = this.$getCssUnit(value);
 		},
 		visible(value) {
 			this.cVisible = !!value;
@@ -140,18 +198,11 @@ export default {
 	computed: {},
 	mounted() {
 		let self = this;
-		this.cWidth = this.getCssUnit(this.width);
-		this.cHeight = this.getCssUnit(this.height);
+		this.cWidth = this.$getCssUnit(this.width);
 		self.cVisible = !!self.visible;
 		console.log(`self.cVisible: `, self.cVisible, self.visible);
 	},
 	methods: {
-		getCssUnit(value) {
-			if (isNaN(Number(value))) {
-				return value;
-			}
-			return `${value}px`;
-		},
 		handleOk(e) {
 			this.cVisible = false;
 			console.log(`ok: `, e);
