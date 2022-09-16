@@ -1,5 +1,11 @@
 const testRoutes = [
   {
+    path: "/TestHmImportPage",
+    name: "TestHmImportPage",
+    component: () =>
+      import("/@/pages/test/TestHmImportPage.vue"),
+  },
+  {
     path: "/TestHmBlock",
     name: "TestHmBlock",
     component: () =>
