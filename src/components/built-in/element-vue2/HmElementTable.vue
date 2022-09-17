@@ -28,7 +28,7 @@
         </template>
 
         <!-- 操作按钮 -->
-        <template v-if="column.type == 'action'" slot-scope="scope">
+        <template v-if="column.type == 'action'" #default="scope">
           <el-button v-if="column.type == 'action' && isFlatAction" v-for="action in cActions"
             v-bind="getActionProps(action)" @click="action.callback(scope.row)">{{ action.name }}</el-button>
 
