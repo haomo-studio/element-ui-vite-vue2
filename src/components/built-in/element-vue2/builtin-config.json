@@ -56,6 +56,14 @@
         "imgUrl": "built-in/element-vue2/layout/img/HmModal.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmImportPage",
+        "title": "引用页面",
+        "importPath": "built-in/element-vue2/layout/HmImportPage",
+        "imgUrl": "built-in/element-vue2/layout/img/HmBgCard.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
