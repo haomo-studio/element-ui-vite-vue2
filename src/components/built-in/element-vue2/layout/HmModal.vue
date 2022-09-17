@@ -49,7 +49,7 @@ export default {
 		 */
 		visible: {
 			type: Boolean,
-			default: true,
+			default: false,
 		},
 		/**
 		 * 显示关闭按钮
@@ -184,7 +184,7 @@ export default {
 		return {
 			cWidth: "520px",
       cTop: '15vh',
-			cVisible: true,
+			cVisible: false,
 		};
 	},
 	watch: {
