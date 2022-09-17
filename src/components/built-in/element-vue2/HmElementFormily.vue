@@ -190,8 +190,8 @@ export default {
   components: { Form, SchemaField },
   props: {
     /**
-      * schema对象
-      */
+     * schema对象
+     */
     schema: {
       type: Object,
       default: function() {
@@ -457,6 +457,20 @@ export default {
         }
       }
     },
+    /**
+     * label-col
+     */
+    labelCol: {
+      type: Number,
+      default: 4
+    },
+    /**
+     * wrapper-col
+     */
+    wrapperCol: {
+      type: Number,
+      default: 14
+    }
   },
   data() {
     let self = this
