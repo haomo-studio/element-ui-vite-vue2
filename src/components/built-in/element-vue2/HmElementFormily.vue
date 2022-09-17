@@ -480,7 +480,7 @@ export default {
      */
     getFeiqiFilterValues() {
       let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (newValues[key]) {
           getFeiqiFilterValue(item['x-component'], newValues, key)
         }
@@ -500,7 +500,7 @@ export default {
      */
     getFilterValues() {
       let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (newValues[key] != undefined) {
           getFilterValue(item['x-component'], newValues, key)
         }
@@ -512,7 +512,7 @@ export default {
      */
     getFormValues() {
       let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (newValues[key] != undefined) {
           getFormValue(item['x-component'], newValues, key);
         }
@@ -524,7 +524,7 @@ export default {
      */
     setFormValues(values) {
       let newValues = {};
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (values[key] != null || values[key] != undefined) {
           newValues[key] = setFormValue(item['x-component'], values, key);
         }
