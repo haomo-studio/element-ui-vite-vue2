@@ -24,7 +24,9 @@ import {
   Checkbox,
   Radio,
   Select,
-  Upload
+  Upload,
+  DatePicker,
+  TimePicker
 } from '@formily/element'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
@@ -91,6 +93,8 @@ const { SchemaField } = createSchemaField({
     Select,
     Switch,
     Upload,
+    DatePicker,
+    TimePicker,
     Span,
     Pre,
     Img
@@ -566,7 +570,7 @@ export default {
 }
 </script>
 <style scoped>
-/deep/ form>div{
+/deep/ form > div{
   display: flex !important;
   flex-wrap: wrap;
 }
