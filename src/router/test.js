@@ -140,6 +140,12 @@ const testRoutes = [
     name: "TestHmElementText",
     component: () =>
       import("/@/pages/test/TestHmElementText.vue"),
+  },
+  {
+    path: "/testSelect",
+    name: "testSelect",
+    component: () =>
+      import("/@/pages/test/testSelect.vue"),
   }
 ]
 export default testRoutes
