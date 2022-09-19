@@ -89,9 +89,11 @@ export default {
     };
   },
   watch: {
-    raidoList(value) {
-      console.log("监听的值", value);
-      this.cRaidoList = value;
+    raidoList: {
+      handler: function (value, oldValue) {
+        this.cRaidoList = value;
+      },
+      deep: true,
     },
   },
   mounted() {
