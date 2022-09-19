@@ -6,7 +6,7 @@
     class="hm-tabs"
     @change="onChange"
   >
-    <el-tab-pane v-for="tab in tabs" :key="tab.key" :name="tab.key" :label="tab.name">
+    <el-tab-pane v-for="tab in tabs" :key="tab.key" :name="tab.key + ''" :label="tab.name">
       <template #tab>
         <span>{{ tab.name }}</span>
       </template>
