@@ -110,6 +110,14 @@
         "imgUrl": "built-in/element-vue2/img/HmElementInput.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmElementSelect",
+        "title": "下拉框",
+        "importPath": "built-in/element-vue2/HmElementSelect",
+        "imgUrl": "built-in/element-vue2/img/HmElementSelect.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },

@@ -24,12 +24,15 @@ import {
   Checkbox,
   Radio,
   Select,
-  Upload
+  Upload,
+  DatePicker,
+  TimePicker
 } from '@formily/element'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
 import moment from 'moment'
 import _ from 'lodash'
+import HmElementSelect from './HmElementSelect.vue'
 
 const Span = defineComponent({
   name: 'Span',
@@ -89,8 +92,11 @@ const { SchemaField } = createSchemaField({
     Radio,
     Cascader,
     Select,
+    HmElementSelect,
     Switch,
     Upload,
+    DatePicker,
+    TimePicker,
     Span,
     Pre,
     Img
@@ -580,7 +586,7 @@ export default {
 }
 </script>
 <style scoped>
-/deep/ form>div{
+/deep/ form > div{
   display: flex !important;
   flex-wrap: wrap;
 }

@@ -83,9 +83,11 @@ export default {
     };
   },
   watch: {
-    checkboxList(value) {
-      console.log("监听的值", value);
-      this.cCheckboxList = value;
+    checkboxList: {
+      handler: function (value, oldValue) {
+        this.cCheckboxList = value;
+      },
+      deep: true,
     },
   },
   mounted() {
