@@ -33,6 +33,7 @@ import { FormProvider, createSchemaField } from '@formily/vue'
 import moment from 'moment'
 import _ from 'lodash'
 import HmElementSelect from './HmElementSelect.vue'
+import HmElementInput from "./HmElementInput.vue";
 
 const Span = defineComponent({
   name: 'Span',
@@ -93,6 +94,7 @@ const { SchemaField } = createSchemaField({
     Cascader,
     Select,
     HmElementSelect,
+    HmElementInput,
     Switch,
     Upload,
     DatePicker,
