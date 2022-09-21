@@ -1,9 +1,9 @@
 <template>
   <div>
-    <HmElementementButton
-    :native-type="submit"
-    :type="success"
-    :size="small"
+    <HmElementButton
+    native-type="submit"
+    type="success"
+    size="small"
     icon="el-icon-search"
     :plain="true"
     :round="true"
@@ -11,15 +11,15 @@
     :loading="false"
     :disabled="true"
     :autofocus="true"
-    ></HmElementementButton>
+    ></HmElementButton>
   </div>
 </template>
 
 <script>
-import HmElementementButton from '/@/components/built-in/element-vue2/HmElementementButton.vue'
+import HmElementButton from '/@/components/built-in/element-vue2/HmElementButton.vue'
 export default {
   components: {
-    HmElementementButton
+    HmElementButton
   },
   data(){
     return{

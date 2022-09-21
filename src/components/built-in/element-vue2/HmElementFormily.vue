@@ -24,12 +24,15 @@ import {
   Checkbox,
   Radio,
   Select,
-  Upload
+  Upload,
+  DatePicker,
+  TimePicker
 } from '@formily/element'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/vue'
 import moment from 'moment'
 import _ from 'lodash'
+import HmElementSelect from './HmElementSelect.vue'
 
 const Span = defineComponent({
   name: 'Span',
@@ -89,8 +92,11 @@ const { SchemaField } = createSchemaField({
     Radio,
     Cascader,
     Select,
+    HmElementSelect,
     Switch,
     Upload,
+    DatePicker,
+    TimePicker,
     Span,
     Pre,
     Img
@@ -98,6 +104,9 @@ const { SchemaField } = createSchemaField({
 })
 
 function getFilterValue(type, values, key) {
+  if(!values[key]){
+    return;
+  }
   // 处理input组件
   if (isInput(type) && type !='InputNumber') {
     values[key] = `*${values[key]}*`;
@@ -105,45 +114,51 @@ function getFilterValue(type, values, key) {
   }
   // 处理日期组件
   if (isDate(type)) {
-    values[key] = values[key]?.format('YYYY-MM-DD HH:mm:ss');
+    values[key] = moment(values[key]).format('YYYY-MM-DD HH:mm:ss');
     return;
   }
   // 处理时间组件
   if (isTime(type)) {
-    values[key] = values[key]?.format('HH:mm:ss');
+    values[key] = moment(values[key]).format('HH:mm:ss');
     return;
   }
   // 处理范围日期组件
   if (isRangeDate(type)) {
-    values[`${key}_begin`] = values[key]?.[0]?.format('YYYY-MM-DD HH:mm:ss');
-    values[`${key}_end`] = values[key]?.[1]?.format('YYYY-MM-DD HH:mm:ss');
+    values[`${key}_begin`] = moment(values[key][0]).format('YYYY-MM-DD HH:mm:ss');
+    values[`${key}_end`] = moment(values[key][1]).format('YYYY-MM-DD HH:mm:ss');
     values[key] = undefined;
     return;
   }
 }
 
 function getFeiqiFilterValue(type, values, key) {
+  if(!values[key]){
+    return;
+  }
   // 处理日期组件
   if (isDate(type)) {
-    values[key] = values[key]?.format('YYYY-MM-DD HH:mm:ss');
+    values[key] = moment(values[key]).format('YYYY-MM-DD HH:mm:ss');
     return;
   }
   // 处理时间组件
   if (isTime(type)) {
-    values[key] = values[key]?.format('HH:mm:ss');
+    values[key] = moment(values[key]).format('HH:mm:ss');
     return;
   }
 }
 
 function getFormValue(type, values, key) {
+  if(!values[key]){
+    return;
+  }
   // 处理日期组件
-  if (isDate(type) && values[key]) {
-    values[key] = values[key].format('YYYY-MM-DD HH:mm:ss');
+  if (isDate(type)) {
+    values[key] = moment(values[key]).format('YYYY-MM-DD HH:mm:ss');
     return;
   }
   // 处理时间组件
-  if (isTime(type) && values[key]) {
-    values[key] = values[key].format('HH:mm:ss');
+  if (isTime(type)) {
+    values[key] = moment(values[key]).format('HH:mm:ss');
     return;
   }
 }
@@ -151,7 +166,7 @@ function getFormValue(type, values, key) {
 function setFormValue(type, values, key) {
   // 处理日期\时间组件
   if (isDate(type) || isTime(type)) {
-    return moment(values[key]);
+    return moment(values[key]).toDate();
   }
 
   // 处理日期\时间组件
@@ -190,8 +205,8 @@ export default {
   components: { Form, SchemaField },
   props: {
     /**
-      * schema对象
-      */
+     * schema对象
+     */
     schema: {
       type: Object,
       default: function() {
@@ -457,6 +472,20 @@ export default {
         }
       }
     },
+    /**
+     * label-col
+     */
+    labelCol: {
+      type: Number,
+      default: 4
+    },
+    /**
+     * wrapper-col
+     */
+    wrapperCol: {
+      type: Number,
+      default: 14
+    }
   },
   data() {
     let self = this
@@ -480,7 +509,7 @@ export default {
      */
     getFeiqiFilterValues() {
       let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (newValues[key]) {
           getFeiqiFilterValue(item['x-component'], newValues, key)
         }
@@ -500,7 +529,7 @@ export default {
      */
     getFilterValues() {
       let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (newValues[key] != undefined) {
           getFilterValue(item['x-component'], newValues, key)
         }
@@ -512,7 +541,7 @@ export default {
      */
     getFormValues() {
       let newValues = _.cloneDeep(this.getValues());
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (newValues[key] != undefined) {
           getFormValue(item['x-component'], newValues, key);
         }
@@ -524,7 +553,7 @@ export default {
      */
     setFormValues(values) {
       let newValues = {};
-      _.each(this.schema.properties.form.properties, (item, key) => {
+      _.each(this.schema.properties, (item, key) => {
         if (values[key] != null || values[key] != undefined) {
           newValues[key] = setFormValue(item['x-component'], values, key);
         }
@@ -566,7 +595,7 @@ export default {
 }
 </script>
 <style scoped>
-/deep/ form>div{
+/deep/ form > div{
   display: flex !important;
   flex-wrap: wrap;
 }

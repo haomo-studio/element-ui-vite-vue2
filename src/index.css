@@ -8,10 +8,10 @@ body {
   height: 100%;
 }
 
-body > div {
+/* body > div {
   width: 100%;
   height: 100%;
-}
+} */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -63,4 +63,12 @@ body > div {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
+}
+
+.ele-wrapper {
+  display: inline-block;
+}
+
+.ele-wrapper:empty {
+  display: none;
 }

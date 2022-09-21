@@ -1,5 +1,6 @@
 const testRoutes = [
   {
+
     path: "/HmElementDivider",
     name: "HmElementDivider",
     component: () =>
@@ -51,7 +52,14 @@ const testRoutes = [
     path: '/HmElementCollapse',
     name: 'HmElementCollapse',
     component: () =>
-      import('/@/components/built-in/element-vue2/HmElementCollapse.vue')
+      import('/@/components/built-in/element-vue2/HmElementCollapse.vue'),
+  },
+  {
+    path: "/TestHmImportPage",
+    name: "TestHmImportPage",
+    component: () =>
+      import("/@/pages/test/TestHmImportPage.vue"),
+
   },
   {
     path: "/TestHmBlock",
@@ -160,10 +168,10 @@ const testRoutes = [
       import("/@/pages/test/HmEchartsGeoMap.vue"),
   },
   {
-    path: "/TestHmElementementButton",
-    name: "TestHmElementementButton",
+    path: "/TestHmElementButton",
+    name: "TestHmElementButton",
     component: () =>
-      import("/@/pages/test/TestHmElementementButton.vue"),
+      import("/@/pages/test/TestHmElementButton.vue"),
   },
   {
     path: "/TestHmElementRadio",
@@ -182,6 +190,18 @@ const testRoutes = [
     name: "TestHmElementInput",
     component: () =>
       import("/@/pages/test/TestHmElementInput.vue"),
+  },
+  {
+    path: "/TestHmElementText",
+    name: "TestHmElementText",
+    component: () =>
+      import("/@/pages/test/TestHmElementText.vue"),
+  },
+  {
+    path: "/testSelect",
+    name: "testSelect",
+    component: () =>
+      import("/@/pages/test/testSelect.vue"),
   }
 ]
 export default testRoutes

@@ -56,6 +56,14 @@
         "imgUrl": "built-in/element-vue2/layout/img/HmModal.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmImportPage",
+        "title": "引用页面",
+        "importPath": "built-in/element-vue2/layout/HmImportPage",
+        "imgUrl": "built-in/element-vue2/layout/img/HmBgCard.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
@@ -72,10 +80,10 @@
         "isBuiltIn": true
       },
       {
-        "name": "HmElementementButton",
+        "name": "HmElementButton",
         "title": "按钮",
-        "importPath": "built-in/element-vue2/HmElementementButton",
-        "imgUrl": "built-in/element-vue2/img/HmElementementButton.png",
+        "importPath": "built-in/element-vue2/HmElementButton",
+        "imgUrl": "built-in/element-vue2/img/HmElementButton.png",
         "type": 0,
         "isBuiltIn": true
       },
@@ -100,6 +108,14 @@
         "title": "输入框",
         "importPath": "built-in/element-vue2/HmElementInput",
         "imgUrl": "built-in/element-vue2/img/HmElementInput.png",
+        "type": 0,
+        "isBuiltIn": true
+      },
+      {
+        "name": "HmElementSelect",
+        "title": "下拉框",
+        "importPath": "built-in/element-vue2/HmElementSelect",
+        "imgUrl": "built-in/element-vue2/img/HmElementSelect.png",
         "type": 0,
         "isBuiltIn": true
       }
@@ -593,8 +609,15 @@
   {
     "id": 9,
     "name": "其他",
-    "componentList": [ 
-      
+    "componentList": [
+      {
+        "name": "HmElementText",
+        "title": "文字",
+        "importPath": "built-in/element-vue2/HmElementText",
+        "imgUrl": "built-in/element-vue2/img/HmElementText.png",
+        "type": 0,
+        "isBuiltIn": true
+      }
     ]
   }
 ]

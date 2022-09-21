@@ -30,7 +30,7 @@
         <!-- 操作按钮 -->
         <template v-if="column.type == 'action'" #default="scope">
           <el-button v-if="column.type == 'action' && isFlatAction" v-for="action in cActions"
-            v-bind="getActionProps(action)" @click="action.callback">{{ action.name }}</el-button>
+            v-bind="getActionProps(action)" @click="action.callback(scope.row)">{{ action.name }}</el-button>
 
           <!-- TODO: 增加下拉选择的多按钮 -->
         </template>
