@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <el-input
-      v-model="cValue"
+      v-model:value="cValue"
       :type="type"
       :maxlength="maxlength"
       :minlength="minlength"
@@ -177,12 +177,13 @@ export default {
     },
     onChange: function (e) {
       this.$emit("change", e);
-      console.log("change", this.value, this.cValue);
+      this.$emit("update:value", this.cValue);
+      console.log("change", this.cValue);
     },
     onInput: function (e) {
       this.$emit("update:value", this.cValue);
       this.$emit("oninput", e);
-      console.log("oninput", this.value, this.cValue);
+      console.log("oninput", this.cValue);
     },
     onClear: function (e) {
       this.$emit("clear", e);
