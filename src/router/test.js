@@ -1,5 +1,59 @@
 const testRoutes = [
   {
+    path: "/HmElementDivider",
+    name: "HmElementDivider",
+    component: () =>
+      import("/@/components/built-in/element-vue2/HmElementDivider.vue")
+  },
+  {
+    path: "/HmElementTimeline",
+    name: "HmElementTimeline",
+    component: () =>
+      import("/@/components/built-in/element-vue2/HmElementTimeline.vue")
+  },
+  {
+    path: "/TestHmElementTimeline",
+    name: "TestHmElementTimeline",
+    component: () =>
+      import("/@/pages/test/TestHmElementTimeline.vue"),
+  },
+  {
+    path: "/HmElementCard",
+    name: "HmElementCard",
+    component: () =>
+      import("/@/components/built-in/element-vue2/HmElementCard.vue")
+  },
+  {
+    path: "/HmElementPopconfirm",
+    name: "HmElementPopconfirm",
+    component: () =>
+      import("/@/components/built-in/element-vue2/HmElementPopconfirm.vue")
+  },
+  {
+    path: "/HmElementPopover",
+    name: "HmElementPopover",
+    component: () =>
+      import("/@/components/built-in/element-vue2/HmElementPopover.vue")
+  },
+  {
+    path: '/HmElementCarousel',
+    name: 'HmElementCarousel',
+    component: () =>
+      import('/@/components/built-in/element-vue2/HmElementCarousel.vue')
+  },
+  {
+    path: "/TestHmElementCarousel",
+    name: "TestHmElementCarousel",
+    component: () =>
+      import("/@/pages/test/TestHmElementCarousel.vue"),
+  },
+  {
+    path: '/HmElementCollapse',
+    name: 'HmElementCollapse',
+    component: () =>
+      import('/@/components/built-in/element-vue2/HmElementCollapse.vue')
+  },
+  {
     path: "/TestHmBlock",
     name: "TestHmBlock",
     component: () =>
