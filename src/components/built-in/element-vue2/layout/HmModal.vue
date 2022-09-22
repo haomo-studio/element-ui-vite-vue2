@@ -204,7 +204,7 @@ export default {
 	},
 	methods: {
 		handleOk(e) {
-			// this.cVisible = false;
+			this.cVisible = false;
 			console.log(`ok: `, e);
 			this.$emit("ok", e);
 		},
