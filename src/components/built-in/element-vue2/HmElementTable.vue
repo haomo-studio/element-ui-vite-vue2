@@ -75,6 +75,19 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <div class="table-pagination">
+      <el-pagination
+        v-if="!paginationHidden"
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="cPagination.current"
+        :page-sizes="[10, 20, 50, 100]"
+        :page-size="10"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="cPagination.total || null">
+      </el-pagination>
+    </div>
   </div>
 </template>
 
@@ -219,7 +232,7 @@ export default {
       default: function () {
         return {
           current: 1,
-          pageSize: 10,
+          pageSize: 10
         };
       },
     },
@@ -418,6 +431,7 @@ export default {
   mounted() {
     this.cData = _.cloneDeep(this.data);
     this.cActions = this.convertActions(this.actions);
+    this.cPagination = JSON.parse(JSON.stringify(this.pagination));
     this.getData();
   },
   methods: {
@@ -522,6 +536,23 @@ export default {
       }
       return this.cPagination.pageSize;
     },
+    /**
+     * 单页数量变化
+     */
+    handleSizeChange(value) {
+      this.cPagination.pageSize = value;
+      this.$emit('size-change', value);
+      this.getData();
+    },
+    /**
+     * 翻页
+     */
+    handleCurrentChange(page) {
+      console.log(`handleCurrentChange: `, page);
+      this.cPagination.current = page;
+      this.$emit('current-change', page);
+      this.getData();
+    },
     onSelect(selection, row) {
       this.$emit("select", selection, row);
     },
@@ -594,9 +625,14 @@ export default {
 <style scoped>
 .table-div {
   position: relative;
-  display: flex;
   align-items: center;
   min-width: 300px;
   width: 100%;
+}
+
+.table-pagination {
+  margin-top: 15px;
+  margin-right: 5%;
+  float: right;
 }
 </style>
