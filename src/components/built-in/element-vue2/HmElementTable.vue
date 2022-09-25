@@ -27,34 +27,20 @@
         v-for="column in columns"
         v-bind="getColumnProps(column)"
       >
-        <template
-          v-if="
-            column.children &&
-            column.type != 'action' &&
-            column.type != 'selection'
-          "
-          #default="scope"
+        <!-- 多级表头（最多支持三级） -->
+        <el-table-column
+          v-if="column.children"
+          v-for="column1 in column.children"
+          v-bind="getColumnProps(column1)"
         >
-          <!-- 多级表头（最多支持三级） -->
           <el-table-column
-            v-if="column.children"
-            v-for="column1 in column.children"
-            v-bind="getColumnProps(column1)"
+            v-if="column1.children"
+            v-for="column2 in column1.children"
+            v-bind="getColumnProps(column2)"
           >
-            <template v-if="column1.children" #default="scope1">
-              <el-table-column
-                v-if="column1.children"
-                v-for="column2 in column1.children"
-                v-bind="getColumnProps(column2)"
-              >
-              </el-table-column>
-
-              <span>{{ scope1.row[column1.prop] }}</span>
-            </template>
           </el-table-column>
+        </el-table-column>
 
-          <span>{{ scope.row[column.prop] }}</span>
-        </template>
 
         <!-- 展开行 -->
         <template v-if="column.type == 'expand'" #default="scope">
