@@ -1,26 +1,46 @@
 <template>
   <div class="table-div">
-    <el-table row-key="id" :scroll="scroll" :data="cData" :stripe="stripe" :border="border"
-      :row-class-name="rowClassName.class || function () { return null }" :span-method="spanMethod"
-      :default-expand-all="false" @select="onSelect" @select-all="onSelectAll" @selection-change="onSelectionChange"
-      @row-click="onRowClick" @cell-click="onCellClick" @sort-change="onSortChange" @filter-change="onFilterChange"
-      @expand-change="onExpandChange">
-      <el-table-column v-for="column in columns" v-bind="getColumnProps(column)">
-        <template v-if="column.children && column.type != 'action' && column.type != 'selection'" #default="scope">
-          <!-- 多级表头（最多支持三级） -->
-          <el-table-column v-if="column.children" v-for="column1 in column.children" v-bind="getColumnProps(column1)">
-
-            <template v-if="column1.children" #default="scope1">
-              <el-table-column v-if="column1.children" v-for="column2 in column1.children"
-                v-bind="getColumnProps(column2)">
-              </el-table-column>
-
-              <span>{{ scope1.row[column1.prop] }}</span>
-            </template>
+    <el-table
+      row-key="id"
+      :scroll="scroll"
+      :data="cData"
+      :stripe="stripe"
+      :border="border"
+      :row-class-name="
+        rowClassName.class ||
+        function () {
+          return null;
+        }
+      "
+      :span-method="spanMethod"
+      :default-expand-all="false"
+      @select="onSelect"
+      @select-all="onSelectAll"
+      @selection-change="onSelectionChange"
+      @row-click="onRowClick"
+      @cell-click="onCellClick"
+      @sort-change="onSortChange"
+      @filter-change="onFilterChange"
+      @expand-change="onExpandChange"
+    >
+      <el-table-column
+        v-for="column in columns"
+        v-bind="getColumnProps(column)"
+      >
+        <!-- 多级表头（最多支持三级） -->
+        <el-table-column
+          v-if="column.children"
+          v-for="column1 in column.children"
+          v-bind="getColumnProps(column1)"
+        >
+          <el-table-column
+            v-if="column1.children"
+            v-for="column2 in column1.children"
+            v-bind="getColumnProps(column2)"
+          >
           </el-table-column>
+        </el-table-column>
 
-          <span>{{ scope.row[column.prop] }}</span>
-        </template>
 
         <!-- 展开行 -->
         <template v-if="column.type == 'expand'" #default="scope">
@@ -29,25 +49,43 @@
 
         <!-- 操作按钮 -->
         <template v-if="column.type == 'action'" #default="scope">
-          <el-button v-if="column.type == 'action' && isFlatAction" v-for="action in cActions"
-            v-bind="getActionProps(action)" @click="action.callback(scope.row)">{{ action.name }}</el-button>
+          <el-button
+            v-if="column.type == 'action' && isFlatAction"
+            v-for="action in cActions"
+            v-bind="getActionProps(action)"
+            @click="action.callback(scope.row)"
+            >{{ action.name }}</el-button
+          >
 
           <!-- TODO: 增加下拉选择的多按钮 -->
         </template>
       </el-table-column>
     </el-table>
+
+    <div class="table-pagination">
+      <el-pagination
+        v-if="!paginationHidden"
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="cPagination.current"
+        :page-sizes="[10, 20, 50, 100]"
+        :page-size="10"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="cPagination.total || null">
+      </el-pagination>
+    </div>
   </div>
 </template>
 
 <script>
-import _ from 'lodash';
+import _ from "lodash";
 import jp from "jsonpath";
 import JSONfn from "/@/utils/jsonfn";
 import {
-    getAction,
-    postAction,
-    deleteAction,
-    putAction,
+  getAction,
+  postAction,
+  deleteAction,
+  putAction,
 } from "/@/request/http";
 
 export default {
@@ -62,22 +100,25 @@ export default {
       default: function () {
         return [
           {
-            type: "selection"
+            type: "selection",
           },
           {
             label: "姓名",
             prop: "name",
-            children: [{
-              label: "姓",
-              prop: "familyName",
-              columnid: "familyName",
-              fixed: true
-            }, {
-              label: "名",
-              prop: "givenName",
-              columnid: "givenName",
-              fixed: true
-            }]
+            children: [
+              {
+                label: "姓",
+                prop: "familyName",
+                columnid: "familyName",
+                fixed: true,
+              },
+              {
+                label: "名",
+                prop: "givenName",
+                columnid: "givenName",
+                fixed: true,
+              },
+            ],
           },
           {
             label: "年龄",
@@ -103,7 +144,7 @@ export default {
           },
           {
             label: "操作",
-            type: 'action',
+            type: "action",
           },
         ];
       },
@@ -118,8 +159,8 @@ export default {
           {
             id: "1",
             name: "李四",
-            familyName: '李',
-            givenName: '四',
+            familyName: "李",
+            givenName: "四",
             age: 32,
             address: "北京",
             sexual: "男",
@@ -128,8 +169,8 @@ export default {
           {
             id: "2",
             name: "张三",
-            familyName: '张',
-            givenName: '三',
+            familyName: "张",
+            givenName: "三",
             age: 42,
             address: "北京",
             sexual: "男",
@@ -138,8 +179,8 @@ export default {
           {
             id: "3",
             name: "王五",
-            familyName: '王',
-            givenName: '五',
+            familyName: "王",
+            givenName: "五",
             age: 32,
             address: "深圳",
             sexual: "男",
@@ -153,21 +194,21 @@ export default {
      */
     stripe: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 是否纵向边框
      */
     border: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 隐藏翻页控件
      */
     paginationHidden: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 翻页参数
@@ -177,7 +218,7 @@ export default {
       default: function () {
         return {
           current: 1,
-          pageSize: 10,
+          pageSize: 10
         };
       },
     },
@@ -186,7 +227,7 @@ export default {
      */
     showColumnNo: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * GET URL
@@ -205,25 +246,25 @@ export default {
      * @desc list为列表数据路径；total为总数路径。路径采用JSONPath格式（去掉前面的 $.）
      */
     getDataMap: {
-        type: Object,
-        default: function () {
-            return {
-                list: '',
-                total: ''
-            }
-        }
+      type: Object,
+      default: function () {
+        return {
+          list: "",
+          total: "",
+        };
+      },
     },
     /**
      * 分页参数映射
      */
     paginationMap: {
-        type: Object,
-        default: function () {
-            return {
-                pageNo: 'pageNo',
-                pageSize: 'pageSize'
-            }
-        }
+      type: Object,
+      default: function () {
+        return {
+          pageNo: "pageNo",
+          pageSize: "pageSize",
+        };
+      },
     },
     /**
      * 可选择行
@@ -248,14 +289,14 @@ export default {
         return [
           {
             name: "编辑",
-            type: 'primary',
+            type: "primary",
             callback: function (item) {
               console.log("点击编辑: ", item);
             },
           },
           {
             name: "删除",
-            type: 'danger',
+            type: "danger",
             callback: function (item) {
               console.log("点击删除: ", item);
             },
@@ -286,21 +327,21 @@ export default {
      */
     spanMethod: {
       type: Function,
-      default: function (row, column, rowIndex, columnIndex) { }
+      default: function (row, column, rowIndex, columnIndex) {},
     },
     /**
      * 清空过滤排序
      */
     clearFiltersAndSortersFlag: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * 行高
      */
     rowHeight: {
       type: String,
-      default: '42'
+      default: "42",
     },
     /**
      * 表格背景颜色
@@ -308,7 +349,7 @@ export default {
      * */
     backgroundColor: {
       type: String,
-      default: ""
+      default: "",
     },
     /**
      * 行类名
@@ -317,16 +358,16 @@ export default {
       type: Object,
       default: function () {
         return {
-          class: null
-        }
-      }
-    }
+          class: null,
+        };
+      },
+    },
   },
   data() {
     return {
       cData: [],
       cActions: [],
-      cRowHeight: '42px',
+      cRowHeight: "42px",
       rowSelection: {},
       cPagination: {
         current: 1,
@@ -334,7 +375,7 @@ export default {
       },
       sorter: {},
       filters: {},
-      cBackgroundColor: ''
+      cBackgroundColor: "",
     };
   },
   watch: {
@@ -342,14 +383,14 @@ export default {
       handler: function (value, oldValue) {
         this.cData = _.cloneDeep(value);
       },
-      deep: true
+      deep: true,
     },
     actions: {
       handler: function (value, oldValue) {
-        console.log('watch actions');
+        console.log("watch actions");
         this.cActions = this.convertActions(value);
       },
-      deep: true
+      deep: true,
     },
     url(value) {
       this.getData(value);
@@ -360,28 +401,23 @@ export default {
           // 修复相等的情况下也调用watch的bug
           return;
         }
-        console.log('watch params');
+        console.log("watch params");
         this.getData(null, value);
       },
-      deep: true
+      deep: true,
     },
     rowHeight(value) {
       this.cRowHeight = this.getCssUnit(value);
     },
     backgroundColor(value) {
       this.cBackgroundColor = value;
-    }
+    },
   },
-  computed: {
-  },
+  computed: {},
   mounted() {
     this.cData = _.cloneDeep(this.data);
     this.cActions = this.convertActions(this.actions);
-    if (Object.keys(this.pagination).length === 0) {
-      this.cPagination = false;
-    } else {
-      this.cPagination = Object.assign(this.cPagination, this.pagination);
-    }
+    this.cPagination = JSON.parse(JSON.stringify(this.pagination));
     this.getData();
   },
   methods: {
@@ -418,11 +454,11 @@ export default {
       // 过滤
       if (this.filters) {
         params = Object.assign(params, this.filters);
-        Object.entries(this.filters).forEach(e => {
-          if (typeof e[1] === 'object') {
-            params[e[0]] = e[1].join(",")
+        Object.entries(this.filters).forEach((e) => {
+          if (typeof e[1] === "object") {
+            params[e[0]] = e[1].join(",");
           }
-        })
+        });
       }
 
       // 加载全部，默认为最多加载100万条
@@ -457,7 +493,7 @@ export default {
     getDataList(resp) {
       if (this.getDataMap.list) {
         let listPath = this.getDataMap.list;
-        listPath = listPath.indexOf('$') === 0 ? listPath : `$.${listPath}`;
+        listPath = listPath.indexOf("$") === 0 ? listPath : `$.${listPath}`;
         return jp.query(resp, listPath)[0];
       }
 
@@ -475,7 +511,7 @@ export default {
     getDataTotal(resp) {
       if (this.getDataMap.total) {
         let totalPath = this.getDataMap.total;
-        totalPath = totalPath.indexOf('$') === 0 ? totalPath : `$.${totalPath}`;
+        totalPath = totalPath.indexOf("$") === 0 ? totalPath : `$.${totalPath}`;
         return jp.query(resp, totalPath)[0];
       }
       if (resp.result) {
@@ -485,6 +521,23 @@ export default {
         return resp.total || this.cPagination.pageSize;
       }
       return this.cPagination.pageSize;
+    },
+    /**
+     * 单页数量变化
+     */
+    handleSizeChange(value) {
+      this.cPagination.pageSize = value;
+      this.$emit('size-change', value);
+      this.getData();
+    },
+    /**
+     * 翻页
+     */
+    handleCurrentChange(page) {
+      console.log(`handleCurrentChange: `, page);
+      this.cPagination.current = page;
+      this.$emit('current-change', page);
+      this.getData();
     },
     onSelect(selection, row) {
       this.$emit("select", selection, row);
@@ -521,7 +574,7 @@ export default {
           try {
             action.callback = eval(`(${action.callback})`);
           } catch (error) {
-            console.error('action.callback error: ', action);
+            console.error("action.callback error: ", action);
           }
         }
         ret.push(action);
@@ -542,15 +595,15 @@ export default {
     },
     /**
      * 单元格渲染函数
-     * @param {*} column 
-     * @param {*} data 
+     * @param {*} column
+     * @param {*} data
      */
     getCustomRender(row, column, data, index) {
       if (column.formatter) {
         return column.formatter(row, column, data, index);
       }
       return `<span>${data[column.prop]}</span>`;
-    }
+    },
   },
 };
 </script>
@@ -558,9 +611,14 @@ export default {
 <style scoped>
 .table-div {
   position: relative;
-  display: flex;
   align-items: center;
   min-width: 300px;
   width: 100%;
+}
+
+.table-pagination {
+  margin-top: 15px;
+  margin-right: 5%;
+  float: right;
 }
 </style>

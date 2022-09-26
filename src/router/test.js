@@ -146,6 +146,12 @@ const testRoutes = [
     name: "testSelect",
     component: () =>
       import("/@/pages/test/testSelect.vue"),
+  },
+  {
+    path: "/TestHmElementUpload",
+    name: "TestHmElementUpload",
+    component: () =>
+      import("/@/pages/test/TestHmElementUpload.vue"),
   }
 ]
 export default testRoutes

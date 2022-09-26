@@ -118,6 +118,14 @@
         "imgUrl": "built-in/element-vue2/img/HmElementSelect.png",
         "type": 0,
         "isBuiltIn": true
+      },
+      {
+        "name": "HmElementUpload",
+        "title": "上传",
+        "importPath": "built-in/element-vue2/HmElementUpload",
+        "imgUrl": "built-in/element-vue2/img/HmElementUpload.png",
+        "type": 0,
+        "isBuiltIn": true
       }
     ]
   },
