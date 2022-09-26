@@ -377,6 +377,11 @@ export default {
   mounted() {
     this.cData = _.cloneDeep(this.data);
     this.cActions = this.convertActions(this.actions);
+    if (Object.keys(this.pagination).length === 0) {
+      this.cPagination = false;
+    } else {
+      this.cPagination = Object.assign(this.cPagination, this.pagination);
+    }
     this.getData();
   },
   methods: {
