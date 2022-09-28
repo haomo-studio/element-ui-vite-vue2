@@ -176,7 +176,7 @@ export default {
       this.$emit("blur", e);
     },
     onChange: function (e) {
-      this.$emit("change", e);
+      this.$emit("update:value", this.cValue);
       console.log("change", this.cValue);
     },
     onInput: function (e) {
